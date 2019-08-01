@@ -37,13 +37,13 @@ fi
 
 echo "docker & docker-compose is installed, now need to login"
 echo "_______________________________________________________"
-docker login
+sudo docker login
 
 echo ""
 echo "now downloading streamsheet installing wizard"
 mkdir cedalo
 cd cedalo
-docker run -v ~/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
+sudo docker run -v ~/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 
 echo "new yml is now downloaded, you can start streamsheets by executing ~/cedalo/streamsheets/scripts/start.sh with: sh ~/cedalo/streamsheets/scripts/start.sh"
 sleep 5
