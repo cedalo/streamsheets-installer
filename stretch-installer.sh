@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#this is a script to install streamsheets on raspberry pi with raspbian buster
+#this is a script to install streamsheets on raspberry pi with raspbian stretch
 
 
 #download docker install script
