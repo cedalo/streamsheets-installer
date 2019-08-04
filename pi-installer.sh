@@ -46,7 +46,7 @@ fi
 echo "${GREEN}docker & docker-compose is installed, now need to login${NC}"
 echo "_______________________________________________________"
 
-while [ ! -f ~/.docker/config.json ]
+while [ ! -f /root/.docker/config.json ]
 do
 	sudo docker login
 	sleep 1
