@@ -67,7 +67,7 @@ echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successf
 #echo ""
 #echo ""
 #echo ""
-read -p "${YELLOW}Do you want to start and install streamsheets now? (Y/N)${NC}: " choice
+read -p "Do you want to start and install streamsheets now? (Y/N): " choice
 case "$choice" in
 	y|Y ) cd streamsheets/scripts; sh start.sh;;
 	n|N ) echo "${GREEN}closing shell${NC}";;
