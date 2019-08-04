@@ -4,6 +4,10 @@
 #sudo apt-get update
 #sudo apt-get upgrade
 
+#get user and user home directory
+U=$SUDO_USER
+H=$(eval echo "~$U")
+
 
 #color codes
 RED='\033[0;31m'
@@ -14,7 +18,7 @@ IP=$(hostname -I)
 
 #download docker install script
 #when installed with this script there will be a docker & docker-engine folder in /var/lib and docker folder in /usr/bin
-cd ~
+cd $H
 
 
 if [ -f /usr/bin/docker ]
@@ -56,7 +60,7 @@ echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
 mkdir cedalo
 cd cedalo
-sudo docker run -v ~/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
+sudo docker run -v $H/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 
 
 echo ""
