@@ -48,7 +48,7 @@ else
 	echo "${GREEN}finished installing docker-compose${NC}"
 fi
 
-#echo "${GREEN}docker & docker-compose is installed.${NC}" 
+echo "${GREEN}docker & docker-compose is installed.${NC}" 
 
 echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
@@ -60,7 +60,7 @@ sudo docker run -v $H/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 echo ""
 echo ""
 echo ""
-echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081in your browser (on your local network)${NC}"
+echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (on your local network)${NC}"
 #sleep 5
 #echo ""
 #echo ""
