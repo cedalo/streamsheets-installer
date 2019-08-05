@@ -60,7 +60,7 @@ sudo docker run -v $H/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 echo ""
 echo ""
 echo ""
-echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under$ ${WHITE}$(hostname):8081$ ${GREEN}in your browser (on your local network)${NC}"
+echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081in your browser (on your local network)${NC}"
 #sleep 5
 #echo ""
 #echo ""
