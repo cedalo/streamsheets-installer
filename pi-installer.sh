@@ -48,8 +48,8 @@ else
 	echo "${GREEN}finished installing docker-compose${NC}"
 fi
 
-echo "${GREEN}docker & docker-compose is installed, now need to login${NC}"
-echo "_______________________________________________________"
+#echo "${GREEN}docker & docker-compose is installed, now need to login${NC}"
+#echo "_______________________________________________________"
 
 #while [ ! -f /root/.docker/config.json ]
 #do
