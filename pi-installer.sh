@@ -34,7 +34,7 @@ else
 fi
 
 #run apt-get install pip, if pip is already installed this will do no harm
-echo "${YELLOW}Now installing/updating python3-pip.${NC}"
+echo "${YELLOW}Now installing/updating python3-pip${NC}"
 sudo apt-get install python3-pip
 
 
