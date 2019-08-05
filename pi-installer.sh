@@ -13,6 +13,7 @@ H=$(eval echo "~$U")
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
+WHITE="\[\033[0;37m\]"
 NC='\033[0m'
 IP=$(hostname -I)
 
@@ -66,7 +67,7 @@ sudo docker run -v $H/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 echo ""
 echo ""
 echo ""
-echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (in your local network)${NC}"
+echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under$ ${WHITE}$(hostname):8081$ ${GREEN}in your browser (on your local network)${NC}"
 #sleep 5
 #echo ""
 #echo ""
