@@ -48,7 +48,7 @@ else
 	echo "${GREEN}finished installing docker-compose${NC}"
 fi
 
-echo "${GREEN}docker & docker-compose is installed.${NC}" 
+#echo "${GREEN}docker & docker-compose is installed.${NC}" 
 
 echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
