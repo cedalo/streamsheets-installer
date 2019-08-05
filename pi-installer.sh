@@ -50,11 +50,11 @@ fi
 echo "${GREEN}docker & docker-compose is installed, now need to login${NC}"
 echo "_______________________________________________________"
 
-while [ ! -f /root/.docker/config.json ]
-do
-	sudo docker login
-	sleep 1
-done
+#while [ ! -f /root/.docker/config.json ]
+#do
+#	sudo docker login
+#	sleep 1
+#done
 
 echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
