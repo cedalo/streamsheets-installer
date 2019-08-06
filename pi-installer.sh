@@ -29,7 +29,7 @@ else
 	echo "${YELLOW}installing docker${NC}"
 	echo ""
 	sudo curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
-	sudo usermod -aG docker pi
+#	sudo usermod -aG docker pi
 	echo "${GREEN}installed docker${NC}"
 fi
 
