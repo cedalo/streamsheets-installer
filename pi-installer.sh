@@ -29,8 +29,14 @@ else
 	echo "${YELLOW}installing docker${NC}"
 	echo ""
 	sudo curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
-#	sudo usermod -aG docker pi
-	echo "${GREEN}installed docker${NC}"
+	sudo usermod -aG docker pi
+	if [ -f /usr/bin/docker ]
+	then
+		echo "${GREEN}installed docker${NC}"
+	else
+		echo "${RED}installation of docker failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		exit 1
+	fi
 fi
 
 #run apt-get install pip, if pip is already installed this will do no harm
@@ -45,10 +51,15 @@ else
 	echo "${YELLOW}installing docker-compose now${NC}"
 	echo ""
 	sudo pip3 install docker-compose
-	echo "${GREEN}finished installing docker-compose${NC}"
+	if [ -d "/usr/local/lib/python3.7/dist-packages/compose" ]
+	then
+		echo "${GREEN}finished installing docker-compose${NC}"
+	else
+		echo "${RED}installation of docker-compose failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		exit 2
 fi
 
-echo "${GREEN}docker & docker-compose is installed.${NC}" 
+#echo "${GREEN}docker & docker-compose is installed.${NC}" 
 
 echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
