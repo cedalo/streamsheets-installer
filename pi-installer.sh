@@ -56,6 +56,7 @@ else
 	else
 		echo "${RED}installation of docker-compose failed, try again or search for help at: forum.streamsheets.com ${NC}"
 		exit 2
+	fi
 fi
 
 
