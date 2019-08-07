@@ -1,8 +1,7 @@
 #!/bin/sh
 
 #this is a script to install streamsheets on raspberry pi with raspbian buster
-#sudo apt-get update
-#sudo apt-get upgrade
+
 
 #get user and user home directory
 U=$SUDO_USER
@@ -59,7 +58,7 @@ else
 		exit 2
 fi
 
-#echo "${GREEN}docker & docker-compose is installed.${NC}" 
+
 
 echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
@@ -72,10 +71,6 @@ echo ""
 echo ""
 echo ""
 echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (on your local network)${NC}"
-#sleep 5
-#echo ""
-#echo ""
-#echo ""
 read -p "Do you want to start and install streamsheets now? (Y/n): " choice
 case "$choice" in
 	y|Y ) cd streamsheets/scripts; sh start.sh;;
