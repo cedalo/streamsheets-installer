@@ -71,9 +71,11 @@ echo ""
 echo ""
 echo ""
 echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (on your local network)${NC}"
-read -p "Do you want to start and install streamsheets now? (Y/n): " choice
-case "$choice" in
-	y|Y ) cd streamsheets/scripts; sh start.sh;;
-	n|N ) echo "${GREEN}closing shell${NC}";;
-	* ) echo "${RED}type in y/Y or n/N: ${NC}"
-esac
+while true; do
+	read -p "Do you want to start and install streamsheets now? (Y/n): " choice
+	case "$choice" in
+		y|Y ) cd streamsheets/scripts; sh start.sh;;
+		n|N ) echo "${GREEN}closing shell${NC}";;
+		* ) echo "${RED}type in y/Y or n/N: ${NC}";;
+	esac
+done
