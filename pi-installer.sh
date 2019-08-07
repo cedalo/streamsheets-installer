@@ -75,7 +75,7 @@ while true; do
 	read -p "Do you want to start and install streamsheets now? (Y/n): " choice
 	case "$choice" in
 		y|Y ) cd streamsheets/scripts; sh start.sh;;
-		n|N ) echo "${GREEN}closing shell${NC}";;
+		n|N ) echo "${GREEN}closing shell${NC}"; break;;
 		* ) echo "${RED}type in y/Y or n/N: ${NC}";;
 	esac
 done
