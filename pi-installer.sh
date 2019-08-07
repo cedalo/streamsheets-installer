@@ -17,10 +17,9 @@ NC='\033[0m'
 IP=$(hostname -I)
 
 #download docker install script
-#when installed with this script there will be a docker & docker-engine folder in /var/lib and docker folder in /usr/bin
 cd $H
 
-
+#check if docker is installed
 if [ -f /usr/bin/docker ]
 then
 	echo "${GREEN}Docker already exists${NC}"
@@ -42,15 +41,15 @@ fi
 echo "${YELLOW}Now installing/updating python3-pip${NC}"
 sudo apt-get install python3-pip
 
-
-if [ -d "/usr/local/lib/python3.7/dist-packages/compose" ]
+#check if docker-compose is installed
+if [ -f /usr/local/bin/docker-compose ]
 then
 	echo "${GREEN}docker-compose is already installed${NC}"
 else
 	echo "${YELLOW}installing docker-compose now${NC}"
 	echo ""
 	sudo pip3 install docker-compose
-	if [ -d "/usr/local/lib/python3.7/dist-packages/compose" ]
+	if [ -f /usr/local/bin/docker-compose ]
 	then
 		echo "${GREEN}finished installing docker-compose${NC}"
 	else
