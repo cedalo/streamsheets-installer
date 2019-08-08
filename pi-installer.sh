@@ -64,6 +64,7 @@ echo ""
 echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
 mkdir cedalo
 cd cedalo
+sudo docker rmi $(docker images -q cedalo/streamsheets-installer) -f
 sudo docker run -v $H/cedalo:/streamsheets cedalo/streamsheets-installer:1.3-rpi
 
 
