@@ -1,9 +1,0 @@
-========
-Database
-========
-
-.. toctree::
-   :glob:
-
-   database/*
-
