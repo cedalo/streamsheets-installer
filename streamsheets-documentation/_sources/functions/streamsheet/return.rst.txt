@@ -1,0 +1,34 @@
+.. _return:
+
+RETURN
+-----------------------------
+
+Interrupts the recalculation circle. This is of special interest, if a Streamsheet starts to evaluate on process
+start and is set to evaluate endlessly. Using RETURN, you can stop this endless recalculation.
+
+**Syntax**
+
+=RETURN()
+
+**Arguments**
+
+None.
+
+**Return Value**
+
+TRUE or :ref:`error <error>` value.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =RETURN()
+     - TRUE
+     -
+
+

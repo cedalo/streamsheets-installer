@@ -1,0 +1,40 @@
+GOTO
+-----------------------------
+
+Jump to given cell for next step in current calculation sequence. Normally a Streamsheet is calculated from
+left to right and top to bottom. Using GOTO you can jump within the calculation logic.
+
+**Syntax**
+
+=GOTO(Cell)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Cell
+     - Target cell of GOTO.
+
+**Return Value**
+
+TRUE, if successful, otherwise error code.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =GOTO(A1)
+     - TRUE
+     -
+
+.. warning:: Be careful, when using GOTO, as you can define an endless loop using this function.
+

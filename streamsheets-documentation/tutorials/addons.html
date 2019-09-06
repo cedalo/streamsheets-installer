@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Add-Ons &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Functions" href="../functions.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Add-Ons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#influxdb">InfluxDB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Add-Ons</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/addons.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-ons">
+<h1>Add-Ons<a class="headerlink" href="#add-ons" title="Permalink to this headline">¶</a></h1>
+<p>Adding components to the Streamsheets architecture is possible.</p>
+<div class="section" id="mongodb">
+<span id="id1"></span><h2>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h2>
+<p>Streamsheets come with the option to connect to any MongoDB you need. If you don´t have a MongoDB yet, it is fairly simple to setup.
+While Streamsheets run with docker, the same possibility exists for MongoDB.</p>
+<p><strong>Setup Mongo Database</strong></p>
+<p>Open a terminal of your choice and enter:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">mongo</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">mymongodb</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">mongo</span></code></div>
+</div>
+</div></blockquote>
+<p>If you have the Raspberry Pi version use:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">andresvidal/rpi3-mongodb3</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">mymongodb</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">andresvidal/rpi3-mongodb3</span></code></div>
+</div>
+</div></blockquote>
+<p>This command downloads a MongoDB image and runs it in a container named &lt;container-name&gt; in the docker network “streamsheets”. It is important that the container name does not contain capital letters! Done!</p>
+<p>Now you can create a new MongoDB Connector in the Administration Menu of your Streamsheet installation. Check the “External Host” checkbox and enter the &lt;container-name&gt; under “Host(s)”. All other settings are optional. Add a Producer and use the MONGO.STORE function to safe your first datapoints to your very own MongoDB.</p>
+<p><strong>Start Stop MongoDB</strong></p>
+<p>To properly stop and start your created container enter:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">&lt;container-name&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">&lt;container-name&gt;</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">mymongodb</span></code> <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">mymongodb</span></code></div>
+</div>
+</div></blockquote>
+<p><strong>Further Settings</strong></p>
+<p>You can add these commands to the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command above.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-publish</span> <span class="pre">27017:27017</span></code></td>
+<td>set the MongoDB port to 27017</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">MONGO_INITDB_ROOT_USERNAME=mongoadmin</span></code></td>
+<td>adds root user</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">MONGO_INITDB_ROOT_PASSWORD=secret</span></code></td>
+<td>adds root password</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">./&lt;directory&gt;:/data/db</span></code></td>
+<td>add the container data to a folder outside of the docker environment. (change &lt;directory&gt; to a real path)</td>
+</tr>
+</tbody>
+</table>
+<p>More can be found <a class="reference external" href="https://hub.docker.com/_/mongo">here</a>.</p>
+</div>
+<div class="section" id="influxdb">
+<span id="id2"></span><h2>InfluxDB<a class="headerlink" href="#influxdb" title="Permalink to this headline">¶</a></h2>
+<p>As with MongoDB, it is also possible to connect an InfluxDB. Even the Setup process is pretty similiar. If you do not have a InfluxDB yet, it is fairly simple to setup. While Streamsheets run with docker, the same possibility exists for MongoDB and InfluxDB.</p>
+<p><strong>required</strong></p>
+<p>Streamsheets Version 1.3.2 or higher</p>
+<p><strong>Setup Influx Database</strong></p>
+<p>Open a terminal of your choice and enter:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">influxdb:1.7</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">influxdb</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">myinfluxdb</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">influxdb</span></code></div>
+</div>
+</div></blockquote>
+<p>Those commands download the Version 1.7.7 InfluxDB image and runs it in a container named &lt;container-name&gt; in the docker network “streamsheets”. It is important that the container name does not contain capital letters! First step done!</p>
+<p><strong>Setup Influx Database for RaspberryPi Version</strong></p>
+<p>Open a terminal and enter:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">hypriot/rpi-influxdb</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">&lt;container-name&gt;</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">hypriot/rpi-influxdb</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">myinfluxdb</span> <span class="pre">--net</span> <span class="pre">streamsheets</span> <span class="pre">hypriot/rpi-influxdb</span></code></div>
+</div>
+</div></blockquote>
+<p><strong>Start Stop InfluxDB</strong></p>
+<p>To properly stop and start your created container enter:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">&lt;container-name&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">&lt;container-name&gt;</span></code></div>
+<div class="line">Example: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">myinfluxdb</span></code> <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">myinfluxdb</span></code></div>
+</div>
+</div></blockquote>
+<p>More can be found <a class="reference external" href="https://hub.docker.com/_/influxdb">here</a>.</p>
+<p>Take a look <a class="reference internal" href="examples.html#influx"><span class="std std-ref">here</span></a> for an example use case!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../functions.html" class="btn btn-neutral float-right" title="Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="examples.html" class="btn btn-neutral" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../_static/jquery.js"></script>
+			<script type="text/javascript" src="../_static/underscore.js"></script>
+			<script type="text/javascript" src="../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

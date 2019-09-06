@@ -1,0 +1,57 @@
+
+Installing on a Raspberry Pi
+============
+
+Setting up Docker
+-----------
+
+1. To run Streamsheets you need Docker 18.09 or higher. To set up Docker on a Raspberry Pi, use the following command:
+
+    ``curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh``
+
+2. Check the installation by running the following command:
+
+    ``docker -v``
+
+Setting up Docker Compose
+-----------
+
+1. To install Docker Compose on a Raspberry Pi, run the following commands:
+
+    | ``sudo apt-get update``
+    | ``sudo apt-get install -y python python-pip``
+    | ``sudo pip install docker-compose``
+
+2. Check the installation by running the following command:
+
+    ``docker-compose -v``
+
+Setting up Streamsheets
+-----------
+
+.. hint:: Please also replace < and > !    e.g. step 1: ``mkdir <INSTALL_DIRECTORY>`` → ``mkdir Streamsheets``
+
+1. In order to install Streamsheets first create a target folder for the installation. Choose between manually add the folder or just navigate to your prefered dircetory in your shell and use:
+
+    ``mkdir <INSTALL_DIRECTORY>``
+
+2. Next run the following command to execute the installer for Streamsheets. Replace ``<INSTALL_DIRECTORY>`` with the name of the installation directory and ``<VERSION>`` with the Streamsheets version to install (current version: \ :ref:`currently`\ ).
+
+    ``docker run -v $(pwd)/<INSTALL_DIRECTORY>:/streamsheets cedalo/streamsheets-installer:<VERSION>-rpi``
+
+3. Navigate into the following directory:
+
+    ``cd <INSTALL_DIRECTORY>/streamsheets/scripts/``
+
+This directory contains several shell scripts (and Docker Compose files) to run predefined configiurations of Streamsheets. 
+
+Starting Streamsheets
+-----------
+
+To start the default configuration, run the following command:
+
+``sh start.sh``
+
+The web interface for Streamsheets is available under: ``http://<RASPBERRY_PI_IP>:8081/`` (replace ``<RASPBERRY_PI_IP>`` by either the IP address or the hostname of the Raspberry Pi).
+
+Welcome to the family. 😊

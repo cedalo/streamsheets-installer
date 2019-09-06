@@ -1,0 +1,34 @@
+.. _getmachinestep:
+
+GETMACHINESTEP
+-----------------------------
+
+Returns the current machine step.
+
+The machine step is increased either on each machine cycle, i.e. when a machine runs, or on each manually triggered step,
+i.e. if a :term:`machine <Stream Machine>` is stopped or paused. To get the steps for a Streamsheet refer to :ref:`getstep`.
+
+**Syntax**
+
+=GETMACHINESTEP()
+
+**Arguments**
+
+None.
+
+**Return Value**
+
+Current machine step.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =GETMACHINESTEP()
+     - 1
+     -

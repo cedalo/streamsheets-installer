@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>COUNTER &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DATE" href="../date/date.html" />
+    <link rel="prev" title="COUNT" href="../statistical/count.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../alpha.html">Alphabetical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../date.html">Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engineering.html">Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logical.html">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup.html">Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math.html">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack.html">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical.html">Statistical</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../streamsheet.html">Streamsheet</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amqppublish.html">AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">ARRAY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azureamqppublish.html">AZURE.AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorconvert.html">COLOR.CONVERT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="copyvalues.html">COPYVALUES</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">COUNTER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delete.html">DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletecells.html">DELETECELLS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectchange.html">DETECTCHANGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionary.html">DICTIONARY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edgedetect.html">EDGE.DETECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execute.html">EXECUTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="feedinbox.html">FEEDINBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filewrite.html">FILE.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycle.html">GETCYCLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycletime.html">GETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getexecutestep.html">GETEXECUTESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getmachinestep.html">GETMACHINESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getstep.html">GETSTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goto.html">GOTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbox.html">INBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxdata.html">INBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxmetadata.html">INBOXMETADATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkacommand.html">KAFKA.COMMAND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkapublish.html">KAFKA.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkaquery.html">KAFKA.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopcount.html">LOOPCOUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopindex.html">LOOPINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailsend.html">MAIL.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoaggregate.html">MONGO.AGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongocount.html">MONGO.COUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodelete.html">MONGO.DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoquery.html">MONGO.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongostore.html">MONGO.STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movevalues.html">MOVEVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mqttpublish.html">MQTT.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuaread.html">OPCUA.READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuarespond.html">OPCUA.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuavariables.html">OPCUA.VARIABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuawrite.html">OPCUA.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbox.html">OUTBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outboxdata.html">OUTBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="produce.html">PRODUCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read.html">READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repeatindex.html">REPEATINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="request.html">REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requestinfo.html">REQUESTINFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="respond.html">RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrequest.html">REST.REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrespond.html">REST.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return.html">RETURN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select.html">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setcycletime.html">SETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setphase.html">SETPHASE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setvalue.html">SETVALUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="store.html">STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subtree.html">SUBTREE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swapvalues.html">SWAPVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeaggregate.html">TIMEAGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="udpsend.html">UDP.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webpage.html">WEBPAGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write.html">WRITE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text.html">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../functions.html">Functions</a> &raquo;</li>
+        
+          <li><a href="../alpha.html">Alphabetical</a> &raquo;</li>
+        
+      <li>COUNTER</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/functions/streamsheet/counter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="counter">
+<h1>COUNTER<a class="headerlink" href="#counter" title="Permalink to this headline">¶</a></h1>
+<p>Increments or decrements a cell value by specified step amount. The initial value is defined by “Start” parameter.
+An optional “End” parameter can be set to define a lower or upper bound. Furthermore an optional “Reset” flag can be used
+to restart counter if its value evaluates to TRUE.</p>
+<p><strong>Syntax</strong></p>
+<p>=COUNTER(Start, Step [, End, Reset])</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Start</td>
+<td>A number to initialize the counter with.</td>
+</tr>
+<tr class="row-odd"><td>Step</td>
+<td>Number which specifies the increment (positive number) or decrement (negative number) steps.</td>
+</tr>
+<tr class="row-even"><td>End</td>
+<td>Optional. Number or Condition which defines upper or lower bound.</td>
+</tr>
+<tr class="row-odd"><td>Reset</td>
+<td>Optional. If it evaluates to TRUE the counter is reset to Start. Defaults to FALSE. Since immediately resets if TRUE, mostly used as a condition or reference on a condition.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value</strong></p>
+<p>Number</p>
+<p><strong>Example</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="45%" />
+<col width="10%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Result</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>=COUNTER(2, 2)</td>
+<td>2</td>
+<td>Will initialize counter with 2 and increment by 2 on each step, i.e.: 2, 4, 6,…</td>
+</tr>
+<tr class="row-odd"><td>=COUNTER(10, -2)</td>
+<td>10</td>
+<td>Will initialize counter with 10 and decrement by -2 on each step, i.e.: 10, 8, 6,…</td>
+</tr>
+<tr class="row-even"><td>=COUNTER(2, 1, ,<a class="reference internal" href="getstep.html#getstep"><span class="std std-ref">GETSTEP</span></a>() % 2 &lt;&gt; 0)</td>
+<td>2</td>
+<td>Will initialize counter with 2 and resets it on each even step count, i.e.: 2, 3, 2, 3,…</td>
+</tr>
+<tr class="row-odd"><td>=COUNTER(2, 2, 10)</td>
+<td>2</td>
+<td>Will count from 2 to 10 in steps of 2, i.e. 2, 4, 6, 8, 10</td>
+</tr>
+<tr class="row-even"><td>=COUNTER(10, -2, 0)</td>
+<td>10</td>
+<td>Will count from 10 down to 0 in steps of -2, i.e. 10, 8, …, 0</td>
+</tr>
+<tr class="row-odd"><td>=COUNTER(10, -2, 26)</td>
+<td>10</td>
+<td>Will not decrement since lower bound is greater then start value.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../date/date.html" class="btn btn-neutral float-right" title="DATE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../statistical/count.html" class="btn btn-neutral" title="COUNT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../../_static/jquery.js"></script>
+			<script type="text/javascript" src="../../_static/underscore.js"></script>
+			<script type="text/javascript" src="../../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

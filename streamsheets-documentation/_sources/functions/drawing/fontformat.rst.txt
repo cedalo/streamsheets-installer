@@ -1,0 +1,48 @@
+FONTFORMAT
+----------
+
+Create a font format description from the given arguments.
+
+**Syntax**
+
+FONTFORMAT(Name, Size[, Style, Color,Alignment])
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Name
+     - Name of font to use.
+   * - Size
+     - Size of font in pt.
+   * - Style
+     - Optional. Style of font. Allowed values are "bold" and "italic"
+   * - Color
+     - Optional. Hexadecimal color value.
+   * - Alignment
+     - 0, 1 or 2 changes the alignment of the text to left, centre or right.
+
+
+**Return Value**
+
+JSON String, which defines the font format and can be used in drawing functions.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - FONTFORMAT("Verdana", 10)
+     -
+     -
+
+TODO result JSON
+

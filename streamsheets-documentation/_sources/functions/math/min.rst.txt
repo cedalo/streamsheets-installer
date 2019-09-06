@@ -1,0 +1,37 @@
+MIN
+---
+
+Evaluates the minimum value of all given values.
+
+**Syntax**
+
+=MIN(Value1, Value2...)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value1, Value2...
+     - Number values to evaluate minimum from.
+
+**Return Value**
+
+Minimum value from all given values.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =MIN(3, 6, 12)
+     - 3
+     -
+

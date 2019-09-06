@@ -1,0 +1,37 @@
+.. _getstep:
+
+GETSTEP
+-----------------------------
+
+Returns the current Streamsheet step.
+
+.. Note:: A Streamsheet step is increased only if the Streamsheet is processed, which is not necessarily the case on each 
+            machine step. 
+
+To get the steps for a machine refer to :ref:`getmachinestep` and to get the steps for Streamsheets which are repeatedly
+triggered by :ref:`execute` refer to :ref:`repeatindex`.
+
+**Syntax**
+
+=GETSTEP()
+
+**Arguments**
+
+None.
+
+**Return Value**
+
+Current Streamsheet step.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =GETSTEP()
+     - 1
+     -

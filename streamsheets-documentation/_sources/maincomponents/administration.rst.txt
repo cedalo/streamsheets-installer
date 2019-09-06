@@ -1,0 +1,208 @@
+.. _administration:
+.. |Administration| image:: /images/AdministrationC.PNG
+        :scale: 55 %
+.. |Connector1| image:: /images/MyMongoDBConnector.JPG
+        :scale: 9 %
+        :align: middle
+.. |Connector2| image:: /images/OPCUAConnector.JPG
+        :scale: 10 %
+        :align: middle        
+.. |Connector3| image:: /images/FileConnector.JPG
+        :scale: 10 %
+        :align: middle
+.. |Connector4| image:: /images/RestServerConnector.JPG
+        :scale: 10 %
+        :align: middle
+.. |Connector5| image:: /images/AMQPConnector.JPG
+        :scale: 7 %
+        :align: middle
+.. |Connector6| image:: /images/AzureAMQPConnector.JPG
+        :scale: 9 %
+        :align: middle
+.. |Connector7| image:: /images/RestClient Connector.JPG
+        :scale: 9 %
+        :align: middle
+.. |Connector8| image:: /images/KafkaConnector.JPG
+        :scale: 7 %
+        :align: middle
+.. |Connector9| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Connector10| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Consumer1| image:: /images/MyMongoDBConsumer.JPG
+        :scale: 11 %
+        :align: middle
+.. |Consumer2| image:: /images/OPCUAConsumer.JPG
+        :scale: 10 %
+        :align: middle        
+.. |Consumer3| image:: /images/FileConsumer.JPG
+        :scale: 10 %
+        :align: middle
+.. |Consumer4| image:: /images/RestServerConsumer.JPG
+        :scale: 11 %
+        :align: middle
+.. |Consumer5| image:: /images/AMQPConsumer.jpg
+        :scale: 8 %
+        :align: middle
+.. |Consumer6| image:: /images/AzureAMQPConsumer.jpg
+        :scale: 10 %
+        :align: middle
+.. |Consumer7| image:: /images/KafkaConsumer.jpg
+        :scale: 7 %
+        :align: middle
+.. |Consumer8| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Consumer9| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Consumer10| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Producer1| image:: /images/MyMongoDBProducer.JPG
+        :scale: 10 %
+        :align: middle
+.. |Producer2| image:: /images/OPCUAProducer.JPG
+        :scale: 10 %
+        :align: middle        
+.. |Producer3| image:: /images/FileProducer.JPG
+        :scale: 10 %
+        :align: middle
+.. |Producer4| image:: /images/AMQPProducer.jpg
+        :scale: 8 %
+        :align: middle
+.. |Producer5| image:: /images/AzureAMQPProducer.png
+        :scale: 8 %
+        :align: middle
+.. |Producer6| image:: /images/RestClientProducer.JPG
+        :scale: 10 %
+        :align: middle
+.. |Producer7| image:: /images/KafkaProducer.jpg
+        :scale: 7 %
+        :align: middle
+.. |Producer8| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Producer9| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+.. |Producer10| image:: /images/AdministrationC.PNG
+        :scale: 10 %
+        :align: middle
+
+
+Administration
+==============
+
+In addition to the Dashboard, this is the second major site of the :term:`Streamsheet` environment. Here, you find all resources and sections to configure and organize your Streamsheet environment.
+The :ref:`Stream`\ -resources Consumers, Producers and Connectors serve the purpose of defining data streams.
+Further, the Section “:ref:`Security`” serves all user-related organizational issues whereas “:ref:`Organization`” contains tools to group and structure bigger :term:`Stream Machine` models.
+
+| |Administration|
+
+.. |CSettings| image:: /images/MosquittoConnector.JPG
+        :scale: 55 %
+.. |PSettings| image:: /images/MosquittoProducer.JPG
+        :scale: 55 %
+.. |ConsumerSettings| image:: /images/MosquittoConsumer.JPG
+        :scale: 54 %
+
+.. _Stream: 
+
+Streams
+````````
+
+The Stream-resources :term:`Consumer`\ s, :term:`Producer`\ s and :term:`Connector`\ s serve the purpose of defining data streams. 
+There is a hierarchy to these resources in which Connectors form the foundation for Consumers and Producers. Hence, the definition of a data stream consists either of a Connector-Consumer pair or a Connector-Producer pair. Each Consumer and each Producer runs on exactly one connector. Connectors, on the other hand, can have many consumers and producers.  
+
++ As the name suggests, Connectors take information on overall connection parameters, such as addresses and authentication details. Especially if several message streams are on a broker, server or other “data space”, Connectors contain information which can be shared by Consumers and Producers. Consequently, shared information has to be defined only once in one place.
++ Consumers are used to define the input message stream of Streamsheets.
++ Producers are used to define outgoing message streams.
+
+Connectors
+------------
+Connectors serve the base definition of streams. They contain the information to connect to brokers, servers, clusters and other data spaces. This includes usually addresses and authentication information, such as username and password or certificates.
+
+|CSettings|
+
+*other Connector examples:*
+
+|Connector1| |Connector2| |Connector3| |Connector4| |Connector5| |Connector6| |Connector7| |Connector8|
+
+..   |Connector9| |Connector10|
+
+
+
+.. _Consumers:
+
+Consumers
+------------
+Consumers are the Stream resource to specify data streams which serve as the input for Streamsheets, thus, they deliver messages to a sheet. You must first choose a Connector and then add the missing information to complete the definition of a data stream.
+
+|ConsumerSettings|
+
+*other Consumer examples:*
+
+|Consumer1| |Consumer2| |Consumer3| |Consumer4| |Consumer5| |Consumer6| |Consumer7|
+
+..   |Consumer8| |Consumer9| |Consumer10|
+
+Producers
+-----------
+Producers are very similar to :ref:`Consumers` but instead of defining an input data stream, they define an outgoing data stream.
+
+|PSettings|
+
+*other Producer examples:*
+
+|Producer1| |Producer2| |Producer3| |Producer4| |Producer5| |Producer6| |Producer7|
+
+..   |Producer8| |Producer9| |Producer10|
+
+
+.. _Security:
+
+Security
+````````
+This section contains tools to organize user-related aspects, such has users, their roles and policies which define a role.
+
+Users
+--------
+
+Here you can add, modify and delete user and set their role and security settings. 
+A user must have one role but can also have several. 
+The "admin" user has full control and is inseperable of its "admin role".
+
+Roles 
+------
+
+Roles bundle policies and are assigned to users. If a user does not have a role, he/she is not allowed to do anything.
+The "Admin Role" is inseperable from the "admin" user and the "AdminAllPolicy".
+
+Policies
+---------
+
+Policies determine what users are allowed to do. Per default users are not allowed to do anything, but policies can be granted to them.
+There are different policy categories covering "Machines", "Streams", "Security" and "Label". Adjust the switches to grant or revoke rights. 
+Adding a Label constrains a policy. It hereafter only impacts objects, which also have been assigned the corresponding Label.
+
+.. _Organization:
+
+Organization
+``````````````
+In the Organization menu it is possible administer the label hirachy and download or restore the current database.
+
+Labels
+-------
+
+In the Labelmanager it is possible to create, structure and assign Lable to a variety of objects. These objects include Stream Machines, Streams, Users, Roles and Policies. 
+They can be used to manage authentificaion of users and further serve as a filtering mechanic in the dashboards. 
+
+Database
+---------
+
+Downloading a Database saves the current version of your Streamsheets installation. All Stream Machines, Streams, users, user roles, policies and labels are being saved in one big :term:`JSON` file.
+This file can be restored in any Streamsheet installation at anytime.
+Restart the complete Streamsheets Application after restoring the database from a backup file to finish the restore process.

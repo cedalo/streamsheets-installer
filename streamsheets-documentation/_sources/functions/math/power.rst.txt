@@ -1,0 +1,39 @@
+POWER
+-----------------------------
+
+Evaluates the value of base to the power of exponent.
+
+**Syntax**
+
+=POWER(Value, Exponent)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value
+     - Value to use for base.
+   * - Exponent
+     - Exponent to use
+
+**Return Value**
+
+Value of base to the power of exponent.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =POWER(2, 3)
+     - 8
+     -
+

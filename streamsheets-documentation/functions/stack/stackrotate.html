@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>STACKROTATE &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="STACKSORT" href="stacksort.html" />
+    <link rel="prev" title="STACKFIND" href="stackfind.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../alpha.html">Alphabetical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../date.html">Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engineering.html">Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logical.html">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup.html">Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math.html">Math</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../stack.html">Stack</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="stackadd.html">STACKADD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stackdrop.html">STACKDROP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stackfind.html">STACKFIND</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">STACKROTATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stacksort.html">STACKSORT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical.html">Statistical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../streamsheet.html">Streamsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text.html">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../functions.html">Functions</a> &raquo;</li>
+        
+          <li><a href="../alpha.html">Alphabetical</a> &raquo;</li>
+        
+      <li>STACKROTATE</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/functions/stack/stackrotate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stackrotate">
+<h1>STACKROTATE<a class="headerlink" href="#stackrotate" title="Permalink to this headline">¶</a></h1>
+<p>This function rotates the complete stack by Pos positions up or down.</p>
+<p><strong>Syntax</strong></p>
+<p>=STACKROTATE(StackRange [, Position, TargetRange])</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>StackRange</td>
+<td><div class="first last line-block">
+<div class="line">Range, where the source range items are added to. The first row of the StackRange is a title</div>
+<div class="line">range and remains unchanged.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Position</td>
+<td><div class="first last line-block">
+<div class="line">Optional. If Position equals 0 then it is not rotated.</div>
+<div class="line">If Position &gt; 0 all rows are moved up and the first row becomes the last one (behind the last filled row in the range).</div>
+<div class="line">If Position &lt; 0 all rows move down and the last filled cell becomes the first row. Position defaults to 1.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>TargetRange</td>
+<td><div class="first last line-block">
+<div class="line">If TargetRange is specified, the first row (after rotation) is copied to the TargetRange. TargetRange must have two rows, the first row has labels also found in Stackrange (not necessarily all and maybe not in the same order!). The rotated values are copied to the matching columns in the TargetRange.</div>
+<div class="line"><strong>Important:</strong> Before copying to the TargetRange all existing values in TargetRange are deleted (not the labels row!)</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value</strong></p>
+<p>TRUE, if no error occurred, otherwise <a class="reference internal" href="../../others.html#error"><span class="std std-ref">error</span></a> value.</p>
+<p><strong>Example</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">=STACKROTATE(<span class="blue">A2:D6</span>, 1)</p>
+<div class="last line-block">
+<div class="line"><a class="reference internal" href="../../_images/STACKROTATE1.PNG"><img alt="STACKROTATE1" src="../../_images/STACKROTATE1.PNG" style="width: 377.09999999999997px; height: 143.4px;" /></a></div>
+</div>
+</td>
+<td><p class="first">After calling STACKROTATE</p>
+<div class="last line-block">
+<div class="line"><a class="reference internal" href="../../_images/STACKROTATE2.PNG"><img alt="STACKROTATE2" src="../../_images/STACKROTATE2.PNG" style="width: 376.8px; height: 142.79999999999998px;" /></a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stacksort.html" class="btn btn-neutral float-right" title="STACKSORT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="stackfind.html" class="btn btn-neutral" title="STACKFIND" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../../_static/jquery.js"></script>
+			<script type="text/javascript" src="../../_static/underscore.js"></script>
+			<script type="text/javascript" src="../../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

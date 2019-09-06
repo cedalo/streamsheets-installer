@@ -1,0 +1,37 @@
+TRUNC
+-----------------------------
+
+Truncates a number to an integer.
+
+**Syntax**
+
+=TRUNC(Value)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value
+     - Number value to truncate.
+
+**Return Value**
+
+Number value to truncate.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =TRUNC(7.3423423)
+     - 7
+     -
+

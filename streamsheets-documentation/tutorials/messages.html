@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Messages &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Messages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/messages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="messages">
+<h1>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h1>
+<p>To actually configure a message flow it is essential to understand how to recieve and send data using the grid. In this tutorial I will show you how to use messages from your Inbox as actual input in the grid and how to sent messages to any device you need.
+First of all lets begin with reading a message.</p>
+<div class="section" id="reading">
+<h2>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
+<p>Reading the Inbox is very simple. Just click on the object of your payload you want to work with and drag &amp; drop it onto a cell of your choice.
+This creates a READ() function on the grid. Depending on which object of your payload you dragged all objects included will be dragged to the grid as well.
+There are two ways to represent the payload horizontal and vertical. To change the direction press ctrl while dragging.
+As an alternative you are always welcome to type the READ() function by yourself. This will have the same effect.</p>
+<p><img alt="Drag" src="../_images/PayloadDrag.png" /> <img alt="Drop" src="../_images/PayloadDrop.png" /></p>
+<p>In a running machine the resulting READ() function will update itself with every incoming message, given that it consists out of the same payload structure. If a value is not updated by a new message, the value either stays as it was or turns into “#NA”. This can be configured within the READ() function parameter.</p>
+</div>
+<div class="section" id="publishing">
+<h2>Publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">¶</a></h2>
+<p>To forward your data it is neccessary to create a pubishing function. For each API there is a different function with different parameters. All of these are gathered in our Function Wizard. The wizard provides a simple form to insert the required information, so your data arrives at the right adress.</p>
+<p>You find the Wizard by selecting a cell and clicking on the marked icon.</p>
+<p><img alt="FEinfügen" src="../_images/PublishWizard.jpg" /></p>
+<div class="section" id="publishmqtt">
+<h3>PUBLISHMQTT<a class="headerlink" href="#publishmqtt" title="Permalink to this headline">¶</a></h3>
+<p>PUBLISHMQTT publishes a message via MQTT.</p>
+<p><strong>Streams:</strong> You need to select the Producer with the desired settings. They set the connection and Base Topic for your message.</p>
+<p><strong>Message:</strong> Define your Message using a JSON, number or a string value.</p>
+<p><strong>Topic:</strong> Define the Topic you want to publish your data to. It will always extend the path given by the Connector or Producer of your choice.</p>
+<p><strong>Quality of Service:</strong> Decide how the message will be send using an integer between 0 and 2: “At most once” 0, “At least once” 1 and “Exactly once” 2.</p>
+<p><a class="reference internal" href="../_images/FunctionWizard.jpg"><img alt="FWizard" src="../_images/FunctionWizard.jpg" style="width: 204.29999999999998px; height: 359.7px;" /></a></p>
+</div>
+<div class="section" id="kafkapublish">
+<h3>KAFKAPUBLISH<a class="headerlink" href="#kafkapublish" title="Permalink to this headline">¶</a></h3>
+<p><strong>Streams:</strong> You need to select the Producer with the desired settings. They set the connection and Base Topic for your message.</p>
+<p><strong>Message:</strong> Define your Message using a JSON, number or a string value.</p>
+<p><strong>Topic:</strong> Define the Topic you want to publish your data to. It will always extend the path given by the Connector or Producer of your choice.</p>
+<p><strong>Quality of Service:</strong> Decide how the message will be send using an integer between 0 and 2: “At most once” 0, “At least once” 1 and “Exactly once” 2.</p>
+</div>
+<div class="section" id="restrequest">
+<h3>RESTREQUEST<a class="headerlink" href="#restrequest" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="restrespond">
+<h3>RESTRESPOND<a class="headerlink" href="#restrespond" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sendmail">
+<h3>SENDMAIL<a class="headerlink" href="#sendmail" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="writefile">
+<h3>WRITEFILE<a class="headerlink" href="#writefile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="mongo">
+<h3>MONGO<a class="headerlink" href="#mongo" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="writing">
+<h2>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h2>
+<p>Another way to define a message is in the Outbox.
+Instead of publishing data directly via a function, the Outbox can be used to collect data and define Messages. These Messages can be customized in their JSON structure to fit the target adress.</p>
+<p>To create a new message either use the WRITE() function and declare all objects directly or choose to predefine the structure and keys in the payload.</p>
+<p><strong>WRITE():</strong></p>
+<p>To use the WRITE() function it is neccessary to understand each indivdual Paramter. The WRITE() function is composed out of the following:</p>
+<p>=WRITE(Key, Value, Type)</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Key</td>
+<td>A key to a data item, that should be written. The key is usually created by using the OUTBOXDATA utility function.
+The key consists of the path to the item within the JSON object.</td>
+</tr>
+<tr class="row-odd"><td>Value</td>
+<td>Value to assign to key.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of Value. Allowed types are String, Number, Boolean, Array, Dictionary. The type defines the color of the cell.</td>
+</tr>
+</tbody>
+</table>
+<p>As an example we could write down a customer with the last name “Maier” in the Outbox. This requires the following paramter:</p>
+<p>=WRITE(OUTBOXDATA(“Message”, “Customer”, “Name”), “Maier”, “String”)</p>
+<p>The Key describes, where in the hirachy of our object we want to place the value. In this case we navigate from the Message name “Message” to the key element “Customer” further to the key element “Name”.
+Our value is the actual name “Maier”. Finally we have to decalre what kind of value type “Maier” is. In our case it is a “String”.</p>
+<p>And this is what it would look like:</p>
+<p><img alt="Write" src="../_images/Write.jpg" /></p>
+<p>In A12 you can see the WRITE() function in the grid, on the right side the created Outbox Message and Payload and on the top theWRITE() function is represented.</p>
+<p><em>Sidenote: This state represents the UI after one calculation cycle. The Outbox Message is only created, if the function is calculated once ore more.</em></p>
+<p><strong>Payload:</strong></p>
+<p>To predefine the structure double click in the Outbox payload and a new object will appear. Double click again to create another.</p>
+<p><img alt="OPayload" src="../_images/OutboxPayload.jpg" /></p>
+<p>To change the hirachy of an object select it and press TAB to move it to the right or SHIFT + TAB to move it to the left.</p>
+<p><img alt="OPayload3" src="../_images/OutboxPayload3.jpg" /></p>
+<p>Rename the Keys by double clicking the object.
+To use your predefined structure in the grid simply drag &amp; drop it.</p>
+<p><img alt="OPayload4" src="../_images/OPayload4.jpg" /></p>
+<p>Similar to the payload of the Inbox drag &amp; drop creates a WRITE() function in the grid.</p>
+<p><img alt="OPayload5" src="../_images/OutboxPayload5.jpg" /></p>
+<p>The resulting message values will change from Tick to Tick, if the values in the WRITE() function are updated.</p>
+<p>Now the Message is ready to get published. Again select a cell and open the Function Wizward to publish the Message in the Outbox. Use the function OUTBOX() or OUTBOXDATA() to either publish the whole or only part of the Outbox message.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../_static/jquery.js"></script>
+			<script type="text/javascript" src="../_static/underscore.js"></script>
+			<script type="text/javascript" src="../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

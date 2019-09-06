@@ -1,0 +1,45 @@
+AND
+-----------------------------
+
+Evaluates, if all given values are true.
+
+**Syntax**
+
+=AND(Value1 [, Value2], ...)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value1
+     - First value to check
+   * - Value2, ...
+     - Optional. Other values to check
+
+**Return Value**
+
+TRUE, if all passed arguments are true, otherwise FALSE.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =AND(TRUE,1)
+     - TRUE
+     - Numbers not equal 0 are evaluated as TRUE
+   * - =AND(TRUE,"Test")
+     - TRUE
+     - Non empty strings are evaluated as TRUE
+   * - =AND(FALSE,"Test")
+     - FALSE
+     -
+

@@ -1,0 +1,39 @@
+ROUND
+-----------------------------
+
+Rounds the value to the given amount of decimals.
+
+**Syntax**
+
+=ROUND(Value, Decimals)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value
+     - Value to round.
+   * - Decimals.
+     - Allowed decimals in the result.
+
+**Return Value**
+
+Rounded value with the allowed number of decimals.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =ROUND(7.3423423, 3)
+     - 7.342
+     -
+

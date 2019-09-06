@@ -1,0 +1,37 @@
+INT
+---
+
+Rounds a number value down to its smaller integer.
+
+**Syntax**
+
+=INT(Value)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 100
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value
+     - Number value to round down to an integer.                                                              
+
+**Return Value**
+
+Smaller integer of specified number value.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =INT(3.6)
+     - 3
+     -
+

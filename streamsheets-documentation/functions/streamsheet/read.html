@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>READ &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="REPLACE" href="../text/replace.html" />
+    <link rel="prev" title="RANDID" href="../text/randid.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../alpha.html">Alphabetical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../date.html">Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engineering.html">Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logical.html">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup.html">Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math.html">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack.html">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical.html">Statistical</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../streamsheet.html">Streamsheet</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amqppublish.html">AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">ARRAY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azureamqppublish.html">AZURE.AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorconvert.html">COLOR.CONVERT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="copyvalues.html">COPYVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="counter.html">COUNTER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delete.html">DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletecells.html">DELETECELLS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectchange.html">DETECTCHANGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionary.html">DICTIONARY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edgedetect.html">EDGE.DETECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execute.html">EXECUTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="feedinbox.html">FEEDINBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filewrite.html">FILE.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycle.html">GETCYCLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycletime.html">GETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getexecutestep.html">GETEXECUTESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getmachinestep.html">GETMACHINESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getstep.html">GETSTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goto.html">GOTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbox.html">INBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxdata.html">INBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxmetadata.html">INBOXMETADATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkacommand.html">KAFKA.COMMAND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkapublish.html">KAFKA.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkaquery.html">KAFKA.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopcount.html">LOOPCOUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopindex.html">LOOPINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailsend.html">MAIL.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoaggregate.html">MONGO.AGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongocount.html">MONGO.COUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodelete.html">MONGO.DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoquery.html">MONGO.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongostore.html">MONGO.STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movevalues.html">MOVEVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mqttpublish.html">MQTT.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuaread.html">OPCUA.READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuarespond.html">OPCUA.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuavariables.html">OPCUA.VARIABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuawrite.html">OPCUA.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbox.html">OUTBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outboxdata.html">OUTBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="produce.html">PRODUCE</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repeatindex.html">REPEATINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="request.html">REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requestinfo.html">REQUESTINFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="respond.html">RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrequest.html">REST.REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrespond.html">REST.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return.html">RETURN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select.html">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setcycletime.html">SETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setphase.html">SETPHASE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setvalue.html">SETVALUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="store.html">STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subtree.html">SUBTREE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swapvalues.html">SWAPVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeaggregate.html">TIMEAGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="udpsend.html">UDP.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webpage.html">WEBPAGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write.html">WRITE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text.html">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../functions.html">Functions</a> &raquo;</li>
+        
+          <li><a href="../alpha.html">Alphabetical</a> &raquo;</li>
+        
+      <li>READ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/functions/streamsheet/read.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="read">
+<span id="id1"></span><h1>READ<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h1>
+<p>Reads the values from a <a class="reference internal" href="../../glossary.html#term-json"><span class="xref std std-term">JSON</span></a> object using the given key. Mainly used to read <a class="reference internal" href="../../maincomponents/streamsheet.html#inbox"><span class="std std-ref">Inbox</span></a> <a class="reference internal" href="../../glossary.html#term-payload"><span class="xref std std-term">payload</span></a>s.</p>
+<p><strong>Syntax</strong></p>
+<p>=READ(Key, TargetCell, Type[,Direction, CacheLastValue])</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Key</td>
+<td>A key to a data item, that should be read. The key is usually created by using utility functions
+like <a class="reference internal" href="inboxdata.html#inboxdata"><span class="std std-ref">INBOXDATA</span></a>, <a class="reference internal" href="inboxmetadata.html#inboxmetadata"><span class="std std-ref">INBOXMETADATA</span></a> or <a class="reference internal" href="outboxdata.html#outboxdata"><span class="std std-ref">OUTBOXDATA</span></a>. The key consists of the path to the item within the
+JSON object. Each path element is surrounded by brackets, Depending on the used utility function, you
+can retrieve data from different sources (e.g. Inbox or Outbox).</td>
+</tr>
+<tr class="row-odd"><td>TargetCell or Range</td>
+<td>Target cell or range to write the resulting value into.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of Value. Allowed types are String, Number, Boolean, Array, Dictionary. The type defines the color the cell.</td>
+</tr>
+<tr class="row-odd"><td>Direction</td>
+<td>Optional. Direction how data will be aligned, if a dictionary is read. FALSE aligns the keys
+vertically, TRUE aligns the keys horizontally. By default the function tries to conclude from the size of the
+target range, which direction is used. So defining this is only necessary if rows and columns are equal.</td>
+</tr>
+<tr class="row-even"><td>CacheLastValue</td>
+<td>Optional. If this is set to TRUE #NA! will be returned if no data is available. To return last read value or a
+default value if none was read before specify FALSE. Default is FALSE.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value</strong></p>
+<p>The last part of the key of the data value to be retrieved.</p>
+<p><strong>Example</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="45%" />
+<col width="15%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Result</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>=READ(<a class="reference internal" href="inboxdata.html#inboxdata"><span class="std std-ref">INBOXDATA</span></a>(“”, “”, “Customer”), B1, “String”)</td>
+<td>Customer</td>
+<td>Example to read a value from a JSON object from the inbox of the current Streamsheet and transfer it into cell B1.</td>
+</tr>
+<tr class="row-odd"><td>=READ(<a class="reference internal" href="inboxdata.html#inboxdata"><span class="std std-ref">INBOXDATA</span></a>(“”, “”, “Customer”, “Name”), C2, “String”,,TRUE)</td>
+<td><a class="reference internal" href="../../others.html#error"><span class="std std-ref">#NA!</span></a></td>
+<td>Returns error code if customer name is not available because last parameter is to TRUE.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../text/replace.html" class="btn btn-neutral float-right" title="REPLACE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../text/randid.html" class="btn btn-neutral" title="RANDID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../../_static/jquery.js"></script>
+			<script type="text/javascript" src="../../_static/underscore.js"></script>
+			<script type="text/javascript" src="../../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

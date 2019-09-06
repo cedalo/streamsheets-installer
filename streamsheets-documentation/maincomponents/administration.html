@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Administration &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started" href="../gettingstarted.html" />
+    <link rel="prev" title="Dashboard" href="dashboard.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../maincomponents.html">Main Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="streammachine.html">Stream Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streamsheet.html">Streamsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Administration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#streams">Streams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#connectors">Connectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#consumers">Consumers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#producers">Producers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#security">Security</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#roles">Roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#policies">Policies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#organization">Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#labels">Labels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database">Database</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../maincomponents.html">Main Components</a> &raquo;</li>
+        
+      <li>Administration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/maincomponents/administration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="administration"></span><div class="section" id="id1">
+<h1>Administration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>In addition to the Dashboard, this is the second major site of the <a class="reference internal" href="../glossary.html#term-streamsheet"><span class="xref std std-term">Streamsheet</span></a> environment. Here, you find all resources and sections to configure and organize your Streamsheet environment.
+The <a class="reference internal" href="#stream"><span class="std std-ref">Streams</span></a>-resources Consumers, Producers and Connectors serve the purpose of defining data streams.
+Further, the Section “<a class="reference internal" href="#security"><span class="std std-ref">Security</span></a>” serves all user-related organizational issues whereas “<a class="reference internal" href="#organization"><span class="std std-ref">Organization</span></a>” contains tools to group and structure bigger <a class="reference internal" href="../glossary.html#term-stream-machine"><span class="xref std std-term">Stream Machine</span></a> models.</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../_images/AdministrationC.PNG"><img alt="Administration" src="../_images/AdministrationC.PNG" style="width: 785.95px; height: 477.40000000000003px;" /></a></div>
+</div>
+<div class="section" id="streams">
+<span id="stream"></span><h2>Streams<a class="headerlink" href="#streams" title="Permalink to this headline">¶</a></h2>
+<p>The Stream-resources <a class="reference internal" href="../glossary.html#term-consumer"><span class="xref std std-term">Consumer</span></a>s, <a class="reference internal" href="../glossary.html#term-producer"><span class="xref std std-term">Producer</span></a>s and <a class="reference internal" href="../glossary.html#term-connector"><span class="xref std std-term">Connector</span></a>s serve the purpose of defining data streams.
+There is a hierarchy to these resources in which Connectors form the foundation for Consumers and Producers. Hence, the definition of a data stream consists either of a Connector-Consumer pair or a Connector-Producer pair. Each Consumer and each Producer runs on exactly one connector. Connectors, on the other hand, can have many consumers and producers.</p>
+<ul class="simple">
+<li>As the name suggests, Connectors take information on overall connection parameters, such as addresses and authentication details. Especially if several message streams are on a broker, server or other “data space”, Connectors contain information which can be shared by Consumers and Producers. Consequently, shared information has to be defined only once in one place.</li>
+<li>Consumers are used to define the input message stream of Streamsheets.</li>
+<li>Producers are used to define outgoing message streams.</li>
+</ul>
+<div class="section" id="connectors">
+<h3>Connectors<a class="headerlink" href="#connectors" title="Permalink to this headline">¶</a></h3>
+<p>Connectors serve the base definition of streams. They contain the information to connect to brokers, servers, clusters and other data spaces. This includes usually addresses and authentication information, such as username and password or certificates.</p>
+<p><a class="reference internal" href="../_images/MosquittoConnector.JPG"><img alt="CSettings" src="../_images/MosquittoConnector.JPG" style="width: 584.1px; height: 390.50000000000006px;" /></a></p>
+<p><em>other Connector examples:</em></p>
+<p><a class="reference internal" href="../_images/MyMongoDBConnector.JPG"><img alt="Connector1" class="align-middle" src="../_images/MyMongoDBConnector.JPG" style="width: 96.03px; height: 80.64px;" /></a> <a class="reference internal" href="../_images/OPCUAConnector.JPG"><img alt="Connector2" class="align-middle" src="../_images/OPCUAConnector.JPG" style="width: 106.4px; height: 76.5px;" /></a> <a class="reference internal" href="../_images/FileConnector.JPG"><img alt="Connector3" class="align-middle" src="../_images/FileConnector.JPG" style="width: 106.0px; height: 68.9px;" /></a> <a class="reference internal" href="../_images/RestServerConnector.JPG"><img alt="Connector4" class="align-middle" src="../_images/RestServerConnector.JPG" style="width: 106.5px; height: 62.1px;" /></a> <a class="reference internal" href="../_images/AMQPConnector.JPG"><img alt="Connector5" class="align-middle" src="../_images/AMQPConnector.JPG" style="width: 115.92000000000002px; height: 67.41000000000001px;" /></a> <a class="reference internal" href="../_images/AzureAMQPConnector.JPG"><img alt="Connector6" class="align-middle" src="../_images/AzureAMQPConnector.JPG" style="width: 148.85999999999999px; height: 66.14999999999999px;" /></a> <a class="reference internal" href="../_images/RestClientConnector.JPG"><img alt="Connector7" class="align-middle" src="../_images/RestClientConnector.JPG" style="width: 95.39999999999999px; height: 55.53px;" /></a> <a class="reference internal" href="../_images/KafkaConnector.JPG"><img alt="Connector8" class="align-middle" src="../_images/KafkaConnector.JPG" style="width: 106.54px; height: 78.75000000000001px;" /></a></p>
+</div>
+<div class="section" id="consumers">
+<span id="id2"></span><h3>Consumers<a class="headerlink" href="#consumers" title="Permalink to this headline">¶</a></h3>
+<p>Consumers are the Stream resource to specify data streams which serve as the input for Streamsheets, thus, they deliver messages to a sheet. You must first choose a Connector and then add the missing information to complete the definition of a data stream.</p>
+<p><a class="reference internal" href="../_images/MosquittoConsumer.JPG"><img alt="ConsumerSettings" src="../_images/MosquittoConsumer.JPG" style="width: 575.1px; height: 347.76000000000005px;" /></a></p>
+<p><em>other Consumer examples:</em></p>
+<p><a class="reference internal" href="../_images/MyMongoDBConsumer.JPG"><img alt="Consumer1" class="align-middle" src="../_images/MyMongoDBConsumer.JPG" style="width: 116.6px; height: 54.89px;" /></a> <a class="reference internal" href="../_images/OPCUAConsumer.JPG"><img alt="Consumer2" class="align-middle" src="../_images/OPCUAConsumer.JPG" style="width: 106.30000000000001px; height: 69.9px;" /></a> <a class="reference internal" href="../_images/FileConsumer.JPG"><img alt="Consumer3" class="align-middle" src="../_images/FileConsumer.JPG" style="width: 106.0px; height: 72.60000000000001px;" /></a> <a class="reference internal" href="../_images/RestServerConsumer.JPG"><img alt="Consumer4" class="align-middle" src="../_images/RestServerConsumer.JPG" style="width: 116.82000000000001px; height: 61.160000000000004px;" /></a> <a class="reference internal" href="../_images/AMQPConsumer.jpg"><img alt="Consumer5" class="align-middle" src="../_images/AMQPConsumer.jpg" style="width: 132.8px; height: 70.96000000000001px;" /></a> <a class="reference internal" href="../_images/AzureAMQPConsumer.jpg"><img alt="Consumer6" class="align-middle" src="../_images/AzureAMQPConsumer.jpg" style="width: 166.20000000000002px; height: 62.900000000000006px;" /></a> <a class="reference internal" href="../_images/KafkaConsumer.jpg"><img alt="Consumer7" class="align-middle" src="../_images/KafkaConsumer.jpg" style="width: 116.20000000000002px; height: 72.03px;" /></a></p>
+</div>
+<div class="section" id="producers">
+<h3>Producers<a class="headerlink" href="#producers" title="Permalink to this headline">¶</a></h3>
+<p>Producers are very similar to <a class="reference internal" href="#consumers"><span class="std std-ref">Consumers</span></a> but instead of defining an input data stream, they define an outgoing data stream.</p>
+<p><a class="reference internal" href="../_images/MosquittoProducer.JPG"><img alt="PSettings" src="../_images/MosquittoProducer.JPG" style="width: 585.75px; height: 318.45000000000005px;" /></a></p>
+<p><em>other Producer examples:</em></p>
+<p><a class="reference internal" href="../_images/MyMongoDBProducer.JPG"><img alt="Producer1" class="align-middle" src="../_images/MyMongoDBProducer.JPG" style="width: 106.30000000000001px; height: 47.7px;" /></a> <a class="reference internal" href="../_images/OPCUAProducer.JPG"><img alt="Producer2" class="align-middle" src="../_images/OPCUAProducer.JPG" style="width: 106.4px; height: 40.1px;" /></a> <a class="reference internal" href="../_images/FileProducer.JPG"><img alt="Producer3" class="align-middle" src="../_images/FileProducer.JPG" style="width: 106.2px; height: 40.2px;" /></a> <a class="reference internal" href="../_images/AMQPProducer.jpg"><img alt="Producer4" class="align-middle" src="../_images/AMQPProducer.jpg" style="width: 132.96px; height: 59.44px;" /></a> <a class="reference internal" href="../_images/AzureAMQPProducer.png"><img alt="Producer5" class="align-middle" src="../_images/AzureAMQPProducer.png" style="width: 132.8px; height: 59.28px;" /></a> <a class="reference internal" href="../_images/RestClientProducer.JPG"><img alt="Producer6" class="align-middle" src="../_images/RestClientProducer.JPG" style="width: 106.30000000000001px; height: 40.400000000000006px;" /></a> <a class="reference internal" href="../_images/KafkaProducer.jpg"><img alt="Producer7" class="align-middle" src="../_images/KafkaProducer.jpg" style="width: 116.06000000000002px; height: 59.99000000000001px;" /></a></p>
+</div>
+</div>
+<div class="section" id="security">
+<span id="id3"></span><h2>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h2>
+<p>This section contains tools to organize user-related aspects, such has users, their roles and policies which define a role.</p>
+<div class="section" id="users">
+<h3>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h3>
+<p>Here you can add, modify and delete user and set their role and security settings.
+A user must have one role but can also have several.
+The “admin” user has full control and is inseperable of its “admin role”.</p>
+</div>
+<div class="section" id="roles">
+<h3>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h3>
+<p>Roles bundle policies and are assigned to users. If a user does not have a role, he/she is not allowed to do anything.
+The “Admin Role” is inseperable from the “admin” user and the “AdminAllPolicy”.</p>
+</div>
+<div class="section" id="policies">
+<h3>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">¶</a></h3>
+<p>Policies determine what users are allowed to do. Per default users are not allowed to do anything, but policies can be granted to them.
+There are different policy categories covering “Machines”, “Streams”, “Security” and “Label”. Adjust the switches to grant or revoke rights.
+Adding a Label constrains a policy. It hereafter only impacts objects, which also have been assigned the corresponding Label.</p>
+</div>
+</div>
+<div class="section" id="organization">
+<span id="id4"></span><h2>Organization<a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h2>
+<p>In the Organization menu it is possible administer the label hirachy and download or restore the current database.</p>
+<div class="section" id="labels">
+<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h3>
+<p>In the Labelmanager it is possible to create, structure and assign Lable to a variety of objects. These objects include Stream Machines, Streams, Users, Roles and Policies.
+They can be used to manage authentificaion of users and further serve as a filtering mechanic in the dashboards.</p>
+</div>
+<div class="section" id="database">
+<h3>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
+<p>Downloading a Database saves the current version of your Streamsheets installation. All Stream Machines, Streams, users, user roles, policies and labels are being saved in one big <a class="reference internal" href="../glossary.html#term-json"><span class="xref std std-term">JSON</span></a> file.
+This file can be restored in any Streamsheet installation at anytime.
+Restart the complete Streamsheets Application after restoring the database from a backup file to finish the restore process.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gettingstarted.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dashboard.html" class="btn btn-neutral" title="Dashboard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../_static/jquery.js"></script>
+			<script type="text/javascript" src="../_static/underscore.js"></script>
+			<script type="text/javascript" src="../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

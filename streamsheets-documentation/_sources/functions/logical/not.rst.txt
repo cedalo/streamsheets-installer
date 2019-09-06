@@ -1,0 +1,38 @@
+
+NOT
+-----------------------------
+
+Evaluates, if all given values are FALSE.
+
+**Syntax**
+
+=NOT(Value)
+
+**Arguments**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - Value
+     - Value to invert
+
+**Return Value**
+
+If value is TRUE, FALSE, otherwise TRUE.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =NOT(TRUE)
+     - FALSE
+     -
+

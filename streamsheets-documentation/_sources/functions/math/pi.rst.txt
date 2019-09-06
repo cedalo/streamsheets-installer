@@ -1,0 +1,30 @@
+PI
+-----------------------------
+
+Returns the value of PI.
+
+**Syntax**
+
+=PI()
+
+**Arguments**
+
+None.
+
+**Return Value**
+
+Value of PI.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =PI()
+     - 3.14159265
+     -
+

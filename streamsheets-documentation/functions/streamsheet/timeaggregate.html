@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TIMEAGGREGATE &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="TIMEVALUE" href="../date/timevalue.html" />
+    <link rel="prev" title="TIME" href="../date/time.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../alpha.html">Alphabetical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../date.html">Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engineering.html">Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logical.html">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup.html">Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math.html">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack.html">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical.html">Statistical</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../streamsheet.html">Streamsheet</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amqppublish.html">AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">ARRAY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azureamqppublish.html">AZURE.AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorconvert.html">COLOR.CONVERT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="copyvalues.html">COPYVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="counter.html">COUNTER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delete.html">DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletecells.html">DELETECELLS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="detectchange.html">DETECTCHANGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionary.html">DICTIONARY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edgedetect.html">EDGE.DETECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execute.html">EXECUTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="feedinbox.html">FEEDINBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filewrite.html">FILE.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycle.html">GETCYCLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycletime.html">GETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getexecutestep.html">GETEXECUTESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getmachinestep.html">GETMACHINESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getstep.html">GETSTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goto.html">GOTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbox.html">INBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxdata.html">INBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxmetadata.html">INBOXMETADATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkacommand.html">KAFKA.COMMAND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkapublish.html">KAFKA.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkaquery.html">KAFKA.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopcount.html">LOOPCOUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopindex.html">LOOPINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailsend.html">MAIL.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoaggregate.html">MONGO.AGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongocount.html">MONGO.COUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodelete.html">MONGO.DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoquery.html">MONGO.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongostore.html">MONGO.STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movevalues.html">MOVEVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mqttpublish.html">MQTT.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuaread.html">OPCUA.READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuarespond.html">OPCUA.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuavariables.html">OPCUA.VARIABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuawrite.html">OPCUA.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbox.html">OUTBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outboxdata.html">OUTBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="produce.html">PRODUCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read.html">READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repeatindex.html">REPEATINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="request.html">REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requestinfo.html">REQUESTINFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="respond.html">RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrequest.html">REST.REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrespond.html">REST.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return.html">RETURN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select.html">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setcycletime.html">SETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setphase.html">SETPHASE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setvalue.html">SETVALUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="store.html">STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subtree.html">SUBTREE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swapvalues.html">SWAPVALUES</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TIMEAGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="udpsend.html">UDP.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webpage.html">WEBPAGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write.html">WRITE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text.html">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../functions.html">Functions</a> &raquo;</li>
+        
+          <li><a href="../alpha.html">Alphabetical</a> &raquo;</li>
+        
+      <li>TIMEAGGREGATE</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/functions/streamsheet/timeaggregate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="timeaggregate">
+<h1>TIMEAGGREGATE<a class="headerlink" href="#timeaggregate" title="Permalink to this headline">¶</a></h1>
+<p>Aggregates number values over a specified time period. Timeaggregate saves the aggregated interval values in a TargetRange. The returned value in the cell is aggregated over all numbers within the periode.</p>
+<p><strong>Syntax</strong></p>
+<p>TIMEAGGREGATE(DataCell, [Period, AggregationMethod, TimeSerial, Interval, TargetRange])</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DataCell</td>
+<td>The data source cell which should evaluate to a number. All other values are ignored.</td>
+</tr>
+<tr class="row-odd"><td>Period</td>
+<td>Optional. The time period in seconds in which data is collected. Defaults to 60 seconds.</td>
+</tr>
+<tr class="row-even"><td>AggregationMethod</td>
+<td>Optional. One of the predefined numbers which specifies the aggregation method to use. Defaults to 9.</td>
+</tr>
+<tr class="row-odd"><td>TimeSerial</td>
+<td>Optional. A serial number to use as key for each aggregated value. Defaults to <a class="reference internal" href="../date/now.html#now"><span class="std std-ref">NOW</span></a>.</td>
+</tr>
+<tr class="row-even"><td>Interval</td>
+<td><div class="first line-block">
+<div class="line">Optional. An interval in seconds at which values should be aggregated. Defaults to the specified period. To not loose any data, an Interval should always be a divisor of the Period.</div>
+<div class="line">Note: Default Interval collects a different TargetRange as a handwritten equal Period.</div>
+</div>
+<ul class="last simple">
+<li>Default Interval: collects all values within the specified Period.</li>
+<li>Interval equals Period: aggregates all values to one value.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>TargetRange</td>
+<td>Optional. A cell range to write the aggregated values to. Collects aggregation intervals and displays them. Differs if interval is left blank (see interval).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aggregation Methods</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="10%" />
+<col width="15%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Number</th>
+<th class="head">Method</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>AVERAGE</td>
+<td>Calculates the average of all received values.</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>COUNT</td>
+<td>Counts the number of received values.</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>COUNTA</td>
+<td>Counts all values which are not zero.</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>MAX</td>
+<td>Determines the maximum of all received values.</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>MIN</td>
+<td>Determines the minimum of all received values.</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>PRODUCT</td>
+<td>Calculates the product of all received values.</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>STDEV.S</td>
+<td>Currently <strong>not available</strong>!!</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>STDEV.P</td>
+<td>Currently <strong>not available</strong>!!</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>SUM</td>
+<td>Calculates the sum of all received values.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value</strong></p>
+<p>A number value aggregated over all values within specified period.</p>
+<p><strong>Example</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>=TIMEAGGREGATE(C2, 20)</td>
+<td>Calculates the sum of all values read from C2 over a period of 20 seconds.</td>
+</tr>
+<tr class="row-odd"><td>=TIMEAGGREGATE(C2, 20, 1,,2, D4:E14)</td>
+<td>Calculates the average each 2 seconds and writes roughly 10 values to target range D4:E14</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../date/timevalue.html" class="btn btn-neutral float-right" title="TIMEVALUE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../date/time.html" class="btn btn-neutral" title="TIME" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../../_static/jquery.js"></script>
+			<script type="text/javascript" src="../../_static/underscore.js"></script>
+			<script type="text/javascript" src="../../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

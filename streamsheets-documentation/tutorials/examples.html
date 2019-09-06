@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Add-Ons" href="addons.html" />
+    <link rel="prev" title="UI Elements" href="uielements.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uielements.html">UI Elements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rest-request">REST Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opc-ua">OPC UA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#history">History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#influxdb">InfluxDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mail-send">MAIL.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forum">Forum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html">Add-Ons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rest-request">
+<span id="resttutorial"></span><h2>REST Request<a class="headerlink" href="#rest-request" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial covers two different kind of REST Calls one is <strong>POST</strong> and the other is <strong>GET</strong>.
+The differences are that with a “POST” information is transmitted from the REST Client to a server and a “GET” transmits information to the REST Client from the server.
+To add a <span class="xref std std-ref">restrequest</span> function to a <a class="reference internal" href="../glossary.html#term-streamsheet"><span class="xref std std-term">Streamsheet</span></a> you will need a <a class="reference internal" href="../glossary.html#term-connector"><span class="xref std std-term">Connector</span></a> and a <a class="reference internal" href="../glossary.html#term-producer"><span class="xref std std-term">Producer</span></a>, based on the REST Client Provider. Start by creating the Connector in the Connector Dashboard in the <span class="xref std std-ref">Administration</span> Menu. You can leave all fields empty to be able to utilize this Connector for any URL. If you want to create specific Connectors for every webpage, type in the Base URL. Same goes for the Producer. Create a Producer based on the just created Connector and leave it empty.  We can now select the Producer within the <a class="reference internal" href="uielements.html#functionwizard"><span class="std std-ref">Function Wizard</span></a>.</p>
+<p><a class="reference internal" href="../_images/RestRequestGif.gif"><img alt="RCP" src="../_images/RestRequestGif.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Creating Streams for REST</em></p>
+<p><strong>1. Method “Post”:</strong>
+As an example, for a REST Request with the method “POST”, we will create an alert service for Slack.
+Slack is a messenger, which offers the possibility to add self-made applications. This option will be used to add an Alert Application to a Slack channel, posting status updates.</p>
+<p>To begin create such an <a class="reference external" href="https://api.slack.com/apps/">App in Slack</a>
+and add an Incoming <a class="reference external" href="https://api.slack.com/incoming-webhooks/">Webhook</a>. This generates the REST.Request URL we will be posting information to. Choose a Channel on Slack to add your Application to. This is where we will post the information to.
+Now we can start building an App in Streamsheets. Create a new <a class="reference internal" href="../glossary.html#term-stream-machine"><span class="xref std std-term">Stream Machine</span></a> and create a <a class="reference internal" href="../glossary.html#term-json"><span class="xref std std-term">JSON</span></a> Range with the key Value being “text” and the Value being any message you would like to send.
+Create a REST Request function over the Function Wizard and select “POST” as the method. Add the created URL and select the JSON Range as the body. Choose a Target (e.g. <a class="reference internal" href="../functions/streamsheet/outbox.html#outbox"><span class="std std-ref">OUTBOX</span></a>()) for  the response message of the server. Now with every new Step, the Stream Machine will send your message to Slack 😊</p>
+<p><a class="reference internal" href="../_images/RestRequestPost.gif"><img alt="RRP" src="../_images/RestRequestPost.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>REST Request with method “POST”</em></p>
+<p><strong>2. Method “GET”:</strong>
+The “GET” method is very similar to the “POST” method, but in this case we do not need to define any message, because we will be consuming messages.
+A good example is the “API of Ice and Fire” <a class="reference external" href="https://anapioficeandfire.com/">https://anapioficeandfire.com/</a>. It is an REST Request based online wiki for Game of Thrones related information.
+Depending on the URL, different Information can be accessed and displayed.
+Lets choose the following URL: <a class="reference external" href="https://anapioficeandfire.com/api/characters/583">https://anapioficeandfire.com/api/characters/583</a>
+It displays all information regarding Jon Snow in a JSON-Object.
+So lets again create a new Stream Machine. Add a REST Request Function with the help of the Function Wizard. Enter the URL, select “GET” as the method and chose the Target, where the information should be displayed (e.g. <a class="reference internal" href="../functions/streamsheet/inbox.html#inboxf"><span class="std std-ref">INBOX</span></a>()). Confirm your input by clicking “OK”.
+After starting the Stream Machine the requested information will now appear in the Target Range.</p>
+<p><a class="reference internal" href="../_images/RestRequestGet1.gif"><img alt="RRG1" src="../_images/RestRequestGet1.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>REST Request with method “GET”</em></p>
+</div>
+<div class="section" id="opc-ua">
+<h2>OPC UA<a class="headerlink" href="#opc-ua" title="Permalink to this headline">¶</a></h2>
+<p>This simple Tutorial shows how to read information of an <a class="reference internal" href="../glossary.html#term-opc-ua"><span class="xref std std-term">OPC UA</span></a> Server.
+To begin with we have to create Streams, which are connected the OPC UA Server of our choice.</p>
+<p><a class="reference internal" href="../_images/OPCUAGif.gif"><img alt="OPCUACPC" src="../_images/OPCUAGif.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Create Streams for OPC UA</em></p>
+<p>Open up the Administration Menu and create a new OPC UA <a class="reference internal" href="../glossary.html#term-connector"><span class="xref std std-term">Connector</span></a>. Enter the URL of the Server you want to connect to. In this tutorial the OPC UA Server is in the local network. You will need your own OPC UA Server or go to <a class="reference external" href="http://opcuaserver.com/">http://opcuaserver.com/</a> where you can find a series of open OPC UA Server.</p>
+<p><strong>OPC UA Consumer:</strong>
+Open up the <a class="reference internal" href="../glossary.html#term-consumer"><span class="xref std std-term">Consumer</span></a> Dashboard and create a new Consumer, based on the created Connector. Enter the Node ID you want receive and safe your changes (the polling interval defines the interval where the Consumer requests new data from the server). Switch to the <a class="reference internal" href="../glossary.html#term-producer"><span class="xref std std-term">Producer</span></a> Dashboard and create a Producer, again based on the newly created Connector.</p>
+<p>Now we are ready to receive and send messages. Create a new Stream Machine and select the newly created Consumer. Just start the machine and the Consumer will instantly forward messages into the Inbox.</p>
+<p><strong>OPCUA.READ:</strong>
+A second way to receive OPC UA Messages in a <a class="reference internal" href="../glossary.html#term-streamsheet"><span class="xref std std-term">Streamsheet</span></a> is over the <a class="reference internal" href="../functions/streamsheet/opcuaread.html#opcuaread"><span class="std std-ref">OPCUA.READ</span></a> function. Create a new Streamsheet by clicking the plus sign in the bottom right corner and select a cell. Open up the Function Wizard, select the <a class="reference internal" href="../functions/streamsheet/opcuaread.html#opcuaread"><span class="std std-ref">OPCUA.READ</span></a> function and the created Producer. Enter the Node ID and the Target (e.g. <a class="reference internal" href="../functions/streamsheet/inbox.html#inboxf"><span class="std std-ref">INBOX</span></a>()) and confirm your input by clicking “OK”.</p>
+<p>With every new calculation step an <a class="reference internal" href="../functions/streamsheet/opcuaread.html#opcuaread"><span class="std std-ref">OPCUA.READ</span></a> will prompt a new message in the <a class="reference internal" href="../maincomponents/streamsheet.html#inbox"><span class="std std-ref">Inbox</span></a>.</p>
+<p><a class="reference internal" href="../_images/OPCUAREAD.gif"><img alt="OPCUAGif" src="../_images/OPCUAREAD.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Recieve OPC UA Data over Inbox Consumer and OPCUA.READ</em></p>
+<p><strong>OPCUA.WRITE:</strong>
+It is also possible to update existing OPC UA Variables with the OPCUA.WRITE formular. Similiar to before, use the Function Wizard and select OPCUA.WRITE. Choose the right Producer, add the NODE Id and Target Range.</p>
+<p><a class="reference internal" href="../_images/OPCUAWrite.gif"><img alt="OPCUAWrite" src="../_images/OPCUAWrite.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Change a node value on a OPC UA server with OPCUA.WRITE</em></p>
+</div>
+<div class="section" id="history">
+<h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<p>Often it is important to not only work with single real-time data points in the moment, but to build a history and work with a series of values. The following example shows how to create a short (stepwise) data history.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Every <a class="reference internal" href="../glossary.html#term-streamsheet"><span class="xref std std-term">sheet</span></a> is calculated from left to right and from top to bottom. Consequently, cell A1 is calculated first followed by B1, C1 etc. proceding in the next rows in the same manner. Thanks to this concept, we can use references to create a history of values.</p>
+</div>
+</div></blockquote>
+<p>The cell at the very bottom references to the data input and the cells above the reference to the cell below. As higher cells are calculated first, they fetch the values of lower cells before these are calculated. In the end the last cells take the latest data input. Effectively it looks as if new values enter the history at the bottom and move up before leaving the series at the top.</p>
+<p><a class="reference internal" href="../_images/History.gif"><img alt="history" src="../_images/History.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Create data history in a Streamsheet</em></p>
+</div>
+<div class="section" id="mongodb">
+<h2>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h2>
+<p>To store data and retrieve information Streamsheets are able to connect to a <a class="reference internal" href="../glossary.html#term-mongo"><span class="xref std std-term">MongoDB</span></a>. <a class="reference internal" href="addons.html#mongodb"><span class="std std-ref">Here</span></a> you can learn how to add a MongoDB to your current Streamsheets installation.</p>
+<p>Start connecting the MongoDB to your Streamsheets by setting up a MongoDB Connector in the <a class="reference internal" href="../maincomponents/administration.html#administration"><span class="std std-ref">Administration</span></a>.Check the “External Host” checkbox and enter the URL (or if working with Mongo for Docker the container name) in the Host(s) field. All other settings are optional.
+Streamsheets offers five Mongo specific functions within the <a class="reference internal" href="uielements.html#functionwizard"><span class="std std-ref">Function Wizard</span></a>: <a class="reference internal" href="../functions/streamsheet/mongostore.html#mongostore"><span class="std std-ref">MONGO.STORE()</span></a>, <a class="reference internal" href="../functions/streamsheet/mongocount.html#mongocount"><span class="std std-ref">MONGO.COUNT()</span></a>, <a class="reference internal" href="../functions/streamsheet/mongodelete.html#mongodelete"><span class="std std-ref">MONGO.DELETE()</span></a>, <a class="reference internal" href="../functions/streamsheet/mongoquery.html#mongoquery"><span class="std std-ref">MONGO.QUERY()</span></a> and <a class="reference internal" href="../functions/streamsheet/mongoaggregate.html#mongoaggregate"><span class="std std-ref">MONGO.AGGREGATE()</span></a>.
+Setup a Producer on top of the just created Connector and you are ready to go.</p>
+<p><strong>MONGO.STORE:</strong>
+To add new key value pairs to the database open up a Stream Machine and use the function MONGO.STORE. Select the just created Producer and type in any collection name you want. (If the collection is not existent it will automatically create one.) In the “document” field add a JSON Range of your choice to store in the collection.</p>
+<p><strong>MONGO.DELETE:</strong>
+To delete key value pairs from the database use the function MONGO.DELETE. The elements defined in the query will be deleted.</p>
+<p><strong>MONGO.QUERY, MONGO.COUNT &amp; MONGO.AGGREGATE:</strong>
+These three functions all have similar tasks. They all retrieve information from a collection.
+MONGO.QUERY is used to get raw information.
+MONGO.COUNT counts all entries in a collection depending on the inserted JSON Range.
+MONGO.AGGREGATE offeres a wider range of operations to choose from. Different aggregation methods can be used to summerize data. Mongo offeres a variety of operations e.g. covering comparative methods  (“equal” or “greater than”) or logical methods (“and” or “not”), which all can be incooperated in the Aggregate JSON.
+More query operators can be found <a class="reference external" href="https://docs.mongodb.com/manual/reference/operator/query/">here</a>.</p>
+<p><a class="reference internal" href="../_images/MongoDemo.gif"><img alt="MongoDemo" src="../_images/MongoDemo.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>All five Mongo functions used in one GIF.</em></p>
+</div>
+<div class="section" id="influxdb">
+<span id="influx"></span><h2>InfluxDB<a class="headerlink" href="#influxdb" title="Permalink to this headline">¶</a></h2>
+<p>To store data and retrieve information <span class="xref std std-term">Streamsheets</span> are able to connect to a <a class="reference internal" href="../glossary.html#term-influx"><span class="xref std std-term">InfluxDB</span></a>. <a class="reference internal" href="addons.html#influxdb"><span class="std std-ref">Here</span></a> you can learn how to add a InfluxDB to your current Streamsheets installation.</p>
+<p>First of all we start by providing a <a class="reference internal" href="../glossary.html#term-rest"><span class="xref std std-term">REST</span></a> Client <a class="reference internal" href="../glossary.html#term-connector"><span class="xref std std-term">Connector</span></a> and the corresponding <a class="reference internal" href="../glossary.html#term-producer"><span class="xref std std-term">Producer</span></a>. If these are not yet available, go to the <a class="reference internal" href="../maincomponents/administration.html#administration"><span class="std std-ref">Administration</span></a> menu and create a new Connector and Producer. If you have any questions we recommend to have a look at the <a class="reference internal" href="#resttutorial"><span class="std std-ref">REST.REQUEST tutorial</span></a>.</p>
+<div class="line-block">
+<div class="line"><strong>Create a Database:</strong></div>
+<div class="line">Create a database using the REST.REQUEST function. Click on the <a class="reference internal" href="uielements.html#functionwizard"><span class="std std-ref">Function Wizard</span></a>, select the right Producer and use the POST Method. Add the desired database name at the end of the URL.</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><strong>URL:</strong> <em>http://influxdb:8086/query?q=CREATE DATABASE &lt;Database name&gt;</em></div>
+<div class="line"><strong>Example URL:</strong> <em>http://influxdb:8086/query?q=CREATE DATABASE mydb</em></div>
+</div>
+</div></blockquote>
+<p>To create a database it is sufficient to execute the REST.REQUEST once.</p>
+<div class="line-block">
+<div class="line"><strong>Write Data:</strong></div>
+<div class="line">To write data into the InfluxDB, we have to use the <a class="reference internal" href="../functions/streamsheet/request.html#request"><span class="std std-ref">REQUEST</span></a> function. The ParameterJSON range of the function contains 4 parameters. The first is the <a class="reference internal" href="../glossary.html#term-url"><span class="xref std std-term">URL</span></a> which must contain the name of the database. It`s also possible to add a password, precision etc. The second one is the method which is POST when writing the data into the InfluxDB. Third is the body in which the data is located. To successfully parse and write Data in InfluxDB you have to use the <a class="reference internal" href="../glossary.html#term-line-protocol"><span class="xref std std-term">line protocol</span></a>! The InfluxDB line protocol is a text based format for writing points to the database. A single line of text in line protocol format represents one data point in InfluxDB. It informs InfluxDB of the point’s measurement, tag set, field set, and timestamp. Tag set and timestamp are optional. It is important that the spaces and commas are set correctly!</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><strong>Syntax:</strong> <em>&lt;measurement&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;]] &lt;field_key&gt;=&lt;field_value&gt;[,&lt;field_key&gt;=&lt;field_value&gt;] [&lt;timestamp&gt;]</em></div>
+<div class="line"><strong>Example:</strong> <em>h2o_feet,location=freiburg water_level=4</em></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In our example we use a measurement called “h20_feet”. The measurement has one tag key (location) which has one tag values: freiburg. “water_level” is our field_key which stores float field values in the “mydb” database.</div>
+<div class="line">Finally you have to add the “Json” Parameter with FALSE as value. That`s it!</div>
+</div>
+<p><a class="reference internal" href="../_images/InfluxDB-Demo.gif"><img alt="influx" src="../_images/InfluxDB-Demo.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Write Data in InfluxDB with the REQUEST function</em></p>
+<div class="line-block">
+<div class="line"><strong>Query Data:</strong></div>
+<div class="line">To Query Data we use the <span class="xref std std-ref">restrequest</span> function with the GET Method and write the <a class="reference internal" href="../glossary.html#term-query"><span class="xref std std-term">query</span></a> into the <a class="reference internal" href="../glossary.html#term-url"><span class="xref std std-term">URL</span></a>. There are plenty ways to query your Data. You can have a look at them <a class="reference external" href="https://docs.influxdata.com/influxdb/v1.7/query_language/data_exploration/">here</a>. In our simple example we query all data of the last minute from our h2o_feet measurement.</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><strong>URL:</strong> <em>http://influxdb:8086/query?db=&lt;Database name&gt;&amp;q=&lt;your query&gt;</em></div>
+<div class="line"><strong>Example URL:</strong> <em>http://influxdb:8086/query?db=mydb&amp;q=SELECT * FROM “h2o_feet” WHERE time &gt; now() - 1m</em></div>
+</div>
+</div></blockquote>
+<p>Thats it! Now you receive the Data in your payload. It`s time to process the Data in this or another Streamsheet!</p>
+</div>
+<div class="section" id="mail-send">
+<h2>MAIL.SEND<a class="headerlink" href="#mail-send" title="Permalink to this headline">¶</a></h2>
+<p>In This Tutorial we will send E-Mails to a Mail Account from our <a class="reference internal" href="../glossary.html#term-streamsheet"><span class="xref std std-term">Streamsheet</span></a>, using an SMTP Client.</p>
+<p>First of all, create an SMTP_Connector. Therefore click on the <a class="reference internal" href="../maincomponents/administration.html#administration"><span class="std std-ref">Administration</span></a> Menu and navigate to <a class="reference internal" href="../glossary.html#term-connector"><span class="xref std std-term">Connectors</span></a> to create a new Connector, with a “SMTP Provider”. To be able to use the SMTP_Connector, the Host-address, the Port and the Security Protocoll of the Mail Service that is used, needs to be typed in. For example the host-address for Gmail is “smtp.gmail.com”, the Port is 465 and the Security is SSL/TLS. (This may differ from other Mail-Services, their access data can be find on the internet)</p>
+<p><a class="reference internal" href="../_images/smtp_connector.gif"><img alt="SMTP1" src="../_images/smtp_connector.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Create SMTP_Connector</em></p>
+<p>For the next Step change to <a class="reference internal" href="../glossary.html#term-producer"><span class="xref std std-term">Producers</span></a> and create a new Producer, using the previously created Connector. Now enter the sender mail address as User name and add the password below.</p>
+<p>Even if the whole Setup is correct, there is a high chance that it will fail! For instance Gmail is blocking the access of this app, because it’s using a “low” security level. To give Streamsheets access to Gmail, enable “allow low security applications” manually on the Gmail website. After that the Connector and the Producer should be connected!</p>
+<p>Now we are ready to switch to a Streamsheet. To insert the “<a class="reference internal" href="../functions/streamsheet/mailsend.html#mailsend"><span class="std std-ref">MAIL.SEND</span></a>” function in the Streamsheet, use the Function Wizard and select “MAIL.SEND” as the function and the previously created Producer as Stream. For “Text, Subject, TO” etc. either type it in directly or refer to a cell on the sheet. That`s it!</p>
+<p>To prevent spam we recommend adding a condition to the MAIL.SEND function 😄</p>
+<p><a class="reference internal" href="../_images/Loom-speedup.gif"><img alt="SMTP2" src="../_images/Loom-speedup.gif" style="width: 832.0px; height: 468.0px;" /></a>
+<em>Sending mail`s with a condition</em></p>
+</div>
+<div class="section" id="forum">
+<h2>Forum<a class="headerlink" href="#forum" title="Permalink to this headline">¶</a></h2>
+<p>To see even more possibilities of data histories (based on steps and based on time) take a look at our <a class="reference external" href="https://forum.streamsheets.com/t/how-to-save-incoming-messages-in-a-history/28">Streamsheet Forum</a>.
+To access and work with larger series of data connecting to and using a database is usually the best approach.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="addons.html" class="btn btn-neutral float-right" title="Add-Ons" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="uielements.html" class="btn btn-neutral" title="UI Elements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../_static/jquery.js"></script>
+			<script type="text/javascript" src="../_static/underscore.js"></script>
+			<script type="text/javascript" src="../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

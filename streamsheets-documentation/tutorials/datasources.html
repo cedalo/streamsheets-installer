@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Working with Data Sources &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Working with Data Sources</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/datasources.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="working-with-data-sources">
+<h1>Working with Data Sources<a class="headerlink" href="#working-with-data-sources" title="Permalink to this headline">¶</a></h1>
+<p>Data Sources build the link to the outside wolrd for any data stream you want to build. Architectural we are working with Connectors, Consumern and Producern.</p>
+<div class="section" id="connector">
+<h2>Connector<a class="headerlink" href="#connector" title="Permalink to this headline">¶</a></h2>
+<p>A Connector is always the foundation of our communication architecture. Consumer and Producer reference to a Connector and define the details. The connector itself “connects” the Stream Sheet to a provider you can easily choose from a preconfigured list. Once a provider is choosen, there are a variety of settings, which can be applied to define the details of your data stream.</p>
+<div class="section" id="mqtt-connector">
+<h3>MQTT Connector<a class="headerlink" href="#mqtt-connector" title="Permalink to this headline">¶</a></h3>
+<p>The MQTT Connector has the following possible settings.</p>
+<p><a class="reference internal" href="../_images/ConnectorSettings.PNG"><img alt="CSettings" src="../_images/ConnectorSettings.PNG" style="width: 730.5px; height: 423.0px;" /></a></p>
+<ul class="simple">
+<li><strong>Name:</strong> The Name of your Connector</li>
+<li><strong>Provider:</strong> you can´t change the provider. You choose it while creating the connector.</li>
+<li><strong>URL:</strong> Choose the MQTT Broke you want to use. If you want to use our own broker, which is hosted by the Stream Sheet Server, type in <code class="docutils literal notranslate"><span class="pre">broker</span></code></li>
+<li><strong>Port:</strong> Choose the port you will be using to transfer the data.</li>
+<li><strong>User Name &amp; Password:</strong> If your URL needs identification, you can type in your credentials. For local usage not neccessary.</li>
+<li><strong>Base Topic:</strong> The Base topic describes where the connector will be connected to.</li>
+<li><strong>Retain Message:</strong></li>
+<li><strong>QoS:</strong> Stands for quality of service. You have the choice between: At most once, At least once, Exactly once.</li>
+<li><strong>Label:</strong> Choose a label to categorize the Connector and to possibly administer usage rights over our Label system.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="producer">
+<h2>Producer<a class="headerlink" href="#producer" title="Permalink to this headline">¶</a></h2>
+<p>A Producer is used in a Function. It directs the data stream out of the Stream Sheet. The Function together with the Producer defines where your data will be heading. A Producer is always connected to a Connector, which serves as the foundation of a Producer.
+Once the Connector is choosen, there are some additional settings within the Producer.</p>
+<div class="section" id="mqtt-producer">
+<h3>MQTT Producer<a class="headerlink" href="#mqtt-producer" title="Permalink to this headline">¶</a></h3>
+<p>The MQTT Producer has the following possible settings:</p>
+<p><a class="reference internal" href="../_images/ProducerSettings.PNG"><img alt="PSettings" src="../_images/ProducerSettings.PNG" style="width: 730.5px; height: 296.0px;" /></a></p>
+<ul class="simple">
+<li><strong>Name:</strong> The Name of your Producer.</li>
+<li><strong>Connector:</strong> Choose the connected Connector.</li>
+<li><strong>Data Format:</strong> Choose the Data Format a Producer will publish the Messages in.</li>
+<li><strong>Topic:</strong> Extend the Base Topic of the Connector. The Message will be sent to the full topic branch defined through Connector, Producer and Function (ConnectorTopic/ProducerTopic/FunctionTopic).</li>
+<li><strong>Label:</strong> Choose a label to categorize the Connector and to possibly administer usage rights over our Label system.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="consumer">
+<h2>Consumer<a class="headerlink" href="#consumer" title="Permalink to this headline">¶</a></h2>
+<p>A Consumer is always connected to the Inbox of a Stream Sheet. It defines the details of the data stream comming into a Stream Sheet. A Consumer is always connected to a Connector. Once the Connector is choosen, there are some additional settings within the Consumer.</p>
+<div class="section" id="mqtt-consumer">
+<h3>MQTT Consumer<a class="headerlink" href="#mqtt-consumer" title="Permalink to this headline">¶</a></h3>
+<p>The MQTT Consumer has the following Settings:</p>
+<p><a class="reference internal" href="../_images/ConsumerSettings.PNG"><img alt="ConSettings" src="../_images/ConsumerSettings.PNG" style="width: 731.0px; height: 332.5px;" /></a></p>
+<ul class="simple">
+<li><strong>Name:</strong> The Name of your Consumer.</li>
+<li><strong>Connector:</strong> Choose the connected Connector.</li>
+<li><strong>Data Format:</strong> Choose the Data Format you wish to accept in the Inbox.</li>
+<li><strong>Client ID:</strong></li>
+<li><strong>Topics:</strong> Choose one or more topics the Consumer will listen to. Use the comma “,” to seperate topics from another. The topics always extend the Connector Base Topic.</li>
+<li><strong>Filter:</strong></li>
+<li><strong>Label Attribute:</strong></li>
+<li><strong>ID Attribute:</strong></li>
+<li><strong>Label:</strong> Choose a label to categorize the Connector and to possibly administer usage rights over our Label system.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../_static/jquery.js"></script>
+			<script type="text/javascript" src="../_static/underscore.js"></script>
+			<script type="text/javascript" src="../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

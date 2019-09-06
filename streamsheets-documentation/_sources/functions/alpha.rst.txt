@@ -1,0 +1,215 @@
+============
+Alphabetical
+============
+
+.. toctree::
+
+   math/abs
+   logical/and
+   streamsheet/amqppublish
+   math/arccos
+   math/arcsin
+   math/arctan
+   math/arctan2
+   streamsheet/array
+   statistical/average
+   streamsheet/azureamqppublish
+   drawing/bar
+   engineering/bin2dec
+   engineering/bin2hex
+   engineering/bin2oct
+   text/char
+   .. drawing/chart
+   .. drawing/chartaxis
+   .. drawing/chartlegend
+   .. drawing/chartseries
+   .. drawing/charttitle
+   lookup/choose
+   drawing/classifypoint
+   text/clean
+   text/code
+   streamsheet/colorconvert
+   text/concat
+   streamsheet/copyvalues
+   math/cos
+   statistical/count
+   streamsheet/counter
+   date/date
+   date/datevalue
+   database/daverage
+   date/day
+   database/dcount
+   engineering/dec2bin
+   engineering/dec2hex
+   engineering/dec2oct
+   math/degrees
+   streamsheet/delete
+   streamsheet/deletecells
+   .. drawing/deletedrawing
+   streamsheet/detectchange
+   streamsheet/dictionary
+   database/dmax
+   database/dmin
+   .. drawing/drawing
+   database/dsum
+   streamsheet/edgedetect
+   .. drawing/ellipse
+   .. drawing/ellipser
+   math/even
+   streamsheet/execute
+   date/excel2jsontime
+   streamsheet/feedinbox
+   streamsheet/filewrite
+   text/find
+   .. drawing/filllineargradient
+   .. drawing/fillpattern
+   .. drawing/fillradialgradient
+   .. drawing/fontformat
+   math/frac
+   streamsheet/getcycle
+   streamsheet/getcycletime
+   streamsheet/getmachinestep
+   streamsheet/getstep
+   streamsheet/goto
+   engineering/hex2bin
+   engineering/hex2dec
+   engineering/hex2oct
+   date/hour
+   logical/if
+   info/iferror
+   streamsheet/inbox
+   streamsheet/inboxdata
+   streamsheet/inboxmetadata
+   lookup/index
+   math/int
+   info/iserr
+   info/iserror
+   info/iseven
+   info/isna
+   info/isodd
+   date/jsontime2excel
+   streamsheet/kafkacommand
+   streamsheet/kafkapublish
+   streamsheet/kafkaquery
+   .. drawing/label
+   .. drawing/labelr
+   text/left
+   text/len
+   .. drawing/line
+   .. drawing/lineformat
+   .. drawing/lines
+   streamsheet/loopcount
+   streamsheet/loopindex
+   streamsheet/mailsend
+   lookup/match
+   math/max
+   text/mid
+   math/min
+   date/minute
+   math/mod
+   date/month
+   streamsheet/mongodelete
+   streamsheet/mongoquery
+   streamsheet/mongostore
+   streamsheet/movevalues
+   streamsheet/mqttpublish
+   date/mstoserial
+   logical/not
+   date/now
+   engineering/oct2bin
+   engineering/oct2dec
+   engineering/oct2hex
+   math/odd
+   lookup/offset
+   .. olap/olapcubecreate
+   .. olap/olapcubedelete
+   .. olap/olapcubedimlist
+   .. olap/olapcubelist
+   .. olap/olapdata
+   .. olap/olapdatas
+   .. olap/olapdbcreate
+   .. olap/olapdbdelete
+   .. olap/olapdblist
+   .. olap/olapdimcreate
+   .. olap/olapdimdelete
+   .. olap/olapdimlist
+   .. olap/olapdimname
+   .. olap/olapeconsolidate
+   .. olap/olapecreate
+   .. olap/olapedelete
+   .. olap/olapedeleteall
+   .. olap/olapename
+   .. olap/olaplogin
+   .. olap/olaplogout
+   .. olap/olapserversave
+   .. olap/olapsetdata
+   .. olap/olapslice
+   .. olap/olapslicedelete
+   .. drawing/onclick
+   .. drawing/ondoubleclick
+   logical/or
+   streamsheet/outbox
+   streamsheet/outboxdata
+   math/pi
+   .. drawing/polygon
+   .. drawing/polygonr
+   math/power
+   streamsheet/produce
+   .. drawing/qrcode
+   math/radians
+   math/randbetween
+   text/randid
+   streamsheet/read
+   .. drawing/rect
+   .. drawing/rectr
+   text/replace
+   text/rept
+   streamsheet/request
+   streamsheet/requestinfo
+   streamsheet/respond
+   streamsheet/restrequest
+   streamsheet/restrespond
+   streamsheet/return
+   text/right
+   math/round
+   .. drawing/savedrawing
+   text/search
+   date/second
+   streamsheet/select
+   date/serialtoms
+   streamsheet/setcycletime
+   streamsheet/setphase
+   streamsheet/setvalue
+   math/sign
+   math/sin
+   text/split
+   math/sqrt
+   stack/stackadd
+   stack/stackdrop
+   stack/stackfind
+   stack/stackrotate
+   stack/stacksort
+   streamsheet/store
+   text/substitute
+   streamsheet/subtree
+   math/sum
+   streamsheet/swapvalues
+   logical/switch
+   math/tan
+   text/text
+   date/time
+   streamsheet/timeaggregate
+   date/timevalue
+   math/trunc
+   text/unichar
+   text/unicode
+   lookup/vlookup
+   date/weekday
+   streamsheet/udp
+   .. streamsheet/webpage
+   streamsheet/write
+   date/year
+   
+   
+   
+   

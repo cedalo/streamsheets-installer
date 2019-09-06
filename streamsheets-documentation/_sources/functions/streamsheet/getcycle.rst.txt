@@ -1,0 +1,38 @@
+.. _getcycle:
+
+GETCYCLE
+-----------------------------
+
+Returns the Streamsheet steps done in repeat-calculation mode.
+
+.. Note:: this function is only valid for Streamsheets which settings are defined to calculate repeatedly. If this is not 
+            the case this function always returns 1.
+
+To get the number of times a Streamsheet was processed refer to :ref:`getstep` and to get the steps for a Streamsheet 
+which was repeatedly triggered by :ref:`execute` refer to :ref:`repeatindex`
+
+**Syntax**
+
+=GETCYCLE()
+
+**Arguments**
+
+None.
+
+**Return Value**
+
+Steps done in repeat-calculation mode or 1 if Streamsheet mode is different.
+
+**Example**
+
+.. list-table::
+   :widths: 45 10 45
+   :header-rows: 1
+
+   * - Function
+     - Result
+     - Comment
+   * - =GETCYCLE()
+     - 2
+     -
+

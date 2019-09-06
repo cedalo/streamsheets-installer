@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Administration" href="maincomponents/administration.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maincomponents.html">Main Components</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/gettingstarted.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">If you are new to <a class="reference internal" href="glossary.html#term-streamsheet"><span class="xref std std-term">Streamsheets</span></a>, this section offers a quick introduction to help you understand some of the basic principles of this application. In this step-by-step guide we will build a <a class="reference internal" href="glossary.html#term-stream-machine"><span class="xref std std-term">Stream Machine</span></a> which is meant to illustrate quickly how to generate, send and receive data with Streamsheets. More specifically, we will create data in one Streamsheet, continuously send it to the internal <a class="reference internal" href="glossary.html#term-broker"><span class="xref std std-term">MQTT Broker</span></a> and this way produce a data stream which we will then receive in another Streamsheet.</div>
+<div class="line"><br /></div>
+<div class="line">Let´s get started!</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Step 1: Create a Stream Machine</strong></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/Step1.gif"><img alt="Step1" src="_images/Step1.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">After logging in, you are taken to the Stream Machine Dashboard which lists all Stream Machines you have access to. To create your first machine, look to the top-right corner and identify the “Add” button (it is the “plus”). Click it and choose a meaningful name for your Stream Machine, e.g. “Great Start” or “Cats and Dogs”. The option “No <a class="reference internal" href="glossary.html#term-consumer"><span class="xref std std-term">Consumer</span></a>” is pre-selected and means that we will create a Stream Machine which does not have an input data stream connected to it. This is fine for now because, first, we have to create some data.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Step 2: Generate Data</strong></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/Step2.gif"><img alt="Step2" src="_images/Step2.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">Since we do not have a real data streams connected to our application yet, we simulate some to work with. A simple way to do this is to use the function =<a class="reference internal" href="functions/math/randbetween.html#randbetween"><span class="std std-ref">RANDBETWEEN</span></a>(). It creates random values between a minimum and a maximum. Let´s create two values, one beneath the other and name them. Write the names left of the values, e.g. “Cats” and “Dogs”. Then, select all four cells, right-click and define them as a <a class="reference internal" href="glossary.html#term-json"><span class="xref std std-term">JSON</span></a> Range. A JSON is essentially a number of key-value pairs in which the keys can be thought of as the names for the respective values</div>
+</div>
+<div class="line-block">
+<div class="line">Now, this cell range is not only a range in the sheet but also a JSON object which is continuously built with every calculation step of the sheet.</div>
+</div>
+<p>To send these JSON objects and this way create an outgoing data stream, we need Step 3.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Step 3: Create a Consumer and Producer</strong></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/Step3.gif"><img alt="Step3" src="_images/Step3.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">At this point a small theoretical lesson about Streamsheets is helpful:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">To get data into a sheet or send data from a sheet, connections need to be defined. We call these connections Streams.</div>
+<div class="line">Streams always consist of two parts, a Connector and Consumer or a Connector and a Producer. You can also think of them as two layers in which Connectors form the foundation that Consumers and Producers are based on.</div>
+<div class="line">Connectors hold the general information, such as the Host URL, to connect Streamsheets to the outside world. Consumers and Producers, on the other hand, further specify the input (Consumer) and output streams (Producer).</div>
+<div class="line">All three Stream resources are defined in the “Administration”, which can be found in the burger menu in the top-left corner of the Stream Machine.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Please, open the burger menu and go to the “Administration”.</div>
+<div class="line"><br /></div>
+<div class="line">On the left, Connectors, Consumers and Producers are listed under Streams. A MQTT Connector is already in place and connected to the internal MQTT Broker. We are already creating data in our Stream Machine, which we now want to send, thus, we have to set up a Producer. Go to the Producers, add a new one by clicking on the “Add” button in the top-right corner, name it and select the “MQTT Connector” as foundation. Further settings are optional. Save it (top-right corner) and you created your first Producer!</div>
+</div>
+<div class="line-block">
+<div class="line">As we are already in the Administration area, let´s quickly create a Consumer. Again, click the “Add” button, name the Consumer and select the “MQTT Connector” as its foundation. This time we have to specify a topic as an additional parameter, e.g. “catsanddogs”. Then, save the settings by clicking the save symbol in the top right corner.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><strong>Step 4: Produce a Message stream</strong></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/Step4.gif"><img alt="Step4" src="_images/Step4.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">Now, we switch back to our Stream Machine. Should you have closed the tab, just go to the dashboard via the burger menu and open it again.</div>
+<div class="line">To send the JSON Range, we select a cell beneath the range and click “Insert Stream Function” in the tool bar (it is the arrowhead). Choose <a class="reference internal" href="functions/streamsheet/mqttpublish.html#mqttpublish"><span class="std std-ref">MQTT.PUBLISH</span></a> and as Stream the Producer you just created. The message parameter should already be prefilled referencing to the JSON Range above. If that is not the case, select the JSON range. To complete =MQTT.PUBLISH() enter the MQTT topic you listed in the Consumer, possibly “catsanddogs”, and click OK. Then, start the Stream Machine by clicking “Play” in the blue bar on the top.</div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Streamsheets calculate from <strong>left to right</strong> and from <strong>top to bottom</strong>. This means, first, row 1 is calculated from left to right, then, row 2 followed by row 3 … until the end of the sheet is reached. As a consequence, you typically <strong>place a stream function behind the cells you want to send/produce</strong>. Placing the stream function before these cells will send the values of the previous calculation step.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Step 5: Consume a data stream</strong></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/Step5.gif"><img alt="Step5" src="_images/Step5.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">The easiest way to link an input data stream to a Streamsheet is to connect a Consumer to its Inbox. Let´s take this last step! Create another Streamsheet in this Stream Machine by clicking the “plus” icon in the bottom-right corner. In the new Streamsheet look to the top-left where it says “Inbox”. Next to it is a cogwheel which takes you to the Inbox Settings. Select the Consumer you created before and change the calculation mode to “On Message Arrival”. In this mode a Streamsheet is only calculated when messages arrive in its Inbox and not in certain intervals.</div>
+<div class="line"><br /></div>
+<div class="line">Done?</div>
+<div class="line"><br /></div>
+<div class="line">Great! You just set up connections to the local MQTT broker and created a Stream Machine which produces as well as consumes MQTT data streams.</div>
+<div class="line"><br /></div>
+<div class="line">Messages should be arriving in the Inbox of the second Streamsheet. If that is not the case, check whether your Stream Machine is running (on “Play”), that your first Streamsheet has the calculation mode “Continuously” and that the topic in MQTT.PUBLISH() is the same as in the Consumer.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><strong>Optional Step: Ideas on what to do next</strong></div>
+<div class="line"><br /></div>
+<div class="line">As mentioned in the beginning, this example serves as a quick introduction.</div>
+<div class="line">Hence, why not extend this Streamsheet model a little? By dragging and dropping data points which you receive in the Inbox into the grid, you create a direct link between data stream and the spreadsheet world. Consequently, you can start processing data and build logic with spreadsheet formulas, e.g. to calculate KPIs, create dynamic dashboards and build decision engines.</div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="_images/optionalstep.gif"><img alt="optionalstep" src="_images/optionalstep.gif" style="width: 832.0px; height: 468.0px;" /></a></div>
+<div class="line"><br /></div>
+<div class="line">You will notice that you are working “live” on the message stream as incoming data is immediately transferred to the grid and formulas change their results accordingly. Additionally, you always see what the current result in each cell is. Remember: with every calculation step the whole logic is recalculated and, therefore, all conditions are reconsidered and based upon these decisions can be taken. For instance, you could send messages to an additional MQTT topic or a slack channel but only if a certain threshold is met.</div>
+<div class="line"><br /></div>
+<div class="line">Further, sending data from one Streamsheet or Stream Machine to another is useful when building larger models, however, typically you want to set up connections (Streams) to something outside of Streamsheets, too. Hence, why not set up a new Connector to get your Streamsheets communicating with the outside world?</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="maincomponents/administration.html" class="btn btn-neutral" title="Administration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'./',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="_static/jquery.js"></script>
+			<script type="text/javascript" src="_static/underscore.js"></script>
+			<script type="text/javascript" src="_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

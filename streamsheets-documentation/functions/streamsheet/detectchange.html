@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DETECTCHANGE &mdash; Streamsheets Documentation 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DICTIONARY" href="dictionary.html" />
+    <link rel="prev" title="DELETECELLS" href="deletecells.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Streamsheets Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maincomponents.html">Main Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../functions.html">Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../alpha.html">Alphabetical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../date.html">Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engineering.html">Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logical.html">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup.html">Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math.html">Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack.html">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical.html">Statistical</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../streamsheet.html">Streamsheet</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amqppublish.html">AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html">ARRAY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azureamqppublish.html">AZURE.AMQP.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="colorconvert.html">COLOR.CONVERT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="copyvalues.html">COPYVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="counter.html">COUNTER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delete.html">DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletecells.html">DELETECELLS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DETECTCHANGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionary.html">DICTIONARY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edgedetect.html">EDGE.DETECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execute.html">EXECUTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="feedinbox.html">FEEDINBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filewrite.html">FILE.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycle.html">GETCYCLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getcycletime.html">GETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getexecutestep.html">GETEXECUTESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getmachinestep.html">GETMACHINESTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getstep.html">GETSTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goto.html">GOTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbox.html">INBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxdata.html">INBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inboxmetadata.html">INBOXMETADATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkacommand.html">KAFKA.COMMAND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkapublish.html">KAFKA.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafkaquery.html">KAFKA.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopcount.html">LOOPCOUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loopindex.html">LOOPINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailsend.html">MAIL.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoaggregate.html">MONGO.AGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongocount.html">MONGO.COUNT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodelete.html">MONGO.DELETE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoquery.html">MONGO.QUERY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongostore.html">MONGO.STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movevalues.html">MOVEVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mqttpublish.html">MQTT.PUBLISH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuaread.html">OPCUA.READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuarespond.html">OPCUA.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuavariables.html">OPCUA.VARIABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opcuawrite.html">OPCUA.WRITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbox.html">OUTBOX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outboxdata.html">OUTBOXDATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="produce.html">PRODUCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="read.html">READ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repeatindex.html">REPEATINDEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="request.html">REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requestinfo.html">REQUESTINFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="respond.html">RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrequest.html">REST.REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrespond.html">REST.RESPOND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return.html">RETURN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select.html">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setcycletime.html">SETCYCLETIME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setphase.html">SETPHASE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setvalue.html">SETVALUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="store.html">STORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subtree.html">SUBTREE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swapvalues.html">SWAPVALUES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeaggregate.html">TIMEAGGREGATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="udpsend.html">UDP.SEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webpage.html">WEBPAGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write.html">WRITE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text.html">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Streamsheets Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../functions.html">Functions</a> &raquo;</li>
+        
+          <li><a href="../alpha.html">Alphabetical</a> &raquo;</li>
+        
+      <li>DETECTCHANGE</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/functions/streamsheet/detectchange.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="detectchange">
+<h1>DETECTCHANGE<a class="headerlink" href="#detectchange" title="Permalink to this headline">¶</a></h1>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 1.2: </span>Use <a class="reference internal" href="edgedetect.html#edgedetect"><span class="std std-ref">EDGE.DETECT</span></a> instead!</p>
+</div>
+<p>Detects if the result of a given condition changed from FALSE to TRUE.</p>
+<p>This functions detects if a given condition evaluates from FALSE to TRUE. Only in this case TRUE is returned.
+In all other cases, i.e. TRUE to FALSE, FALSE to FALSE or TRUE to TRUE, DETECTCHANGE returns FALSE.
+If the function is processed for the first time it is assumed that a previous condition result was FALSE. That means
+that if the condition immediately evaluates to TRUE, this function returns TRUE.</p>
+<p>The behaviour of this function can be influenced by two optional parameters, namely <em>Period</em> and <em>Delay</em>.
+<em>Period</em> specifies for how long this function still returns TRUE, even if no changes were detected.
+On the other hand <em>Delay</em> specifes for how long this function returns FALSE, after a change was detected. The default
+value of both parameters is 0, meaning they have no effect. If both parameters are set and greater zero, <em>Period</em> starts
+after <em>Delay</em>.</p>
+<p><strong>Syntax</strong></p>
+<p>=DETECTCHANGE(Condition, [Period], PreviousResultCell, TimeStampCell, [Delay])</p>
+<p><strong>Arguments</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Condition</td>
+<td>Value or formula that returns a boolean value.</td>
+</tr>
+<tr class="row-odd"><td>Period (optional)</td>
+<td>Time in milliseconds, where the result of this formula still is TRUE. Starting after an optional delay. Defaults to 0.</td>
+</tr>
+<tr class="row-even"><td>PerviousResultCell</td>
+<td>Cell Reference, somewhere behind the location of this formula, to store condition result from previous cycle.</td>
+</tr>
+<tr class="row-odd"><td>TimeStampCell</td>
+<td>Cell Reference, somewhere behind the location of this formula, to store the timestamp of change detection.</td>
+</tr>
+<tr class="row-even"><td>Delay (opitonal)</td>
+<td>Delay in Milliseconds, where the result of this formula still is FALSE even if condition change was dectected. Defaults to 0.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value</strong></p>
+<p>TRUE, if condition result changes from FALSE to TRUE or FALSE otherwise.</p>
+<p><strong>Example</strong></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="10%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Result</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>=DETECTCHANGE(TRUE, 0, A3, A4)</td>
+<td>TRUE</td>
+<td>period has no effect</td>
+</tr>
+<tr class="row-odd"><td>=DETECTCHANGE(TRUE, 1000, A3, A4)</td>
+<td>TRUE</td>
+<td>returns TRUE for all cycles which run within next second</td>
+</tr>
+<tr class="row-even"><td>=DETECTCHANGE(TRUE, 1000, A3, A4, 1000)</td>
+<td>FALSE</td>
+<td>returns TRUE after a delay of 1 second and then keeps returning TRUE for one second</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dictionary.html" class="btn btn-neutral float-right" title="DICTIONARY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deletecells.html" class="btn btn-neutral" title="DELETECELLS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Cedalo AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+	
+		<script type="text/javascript">
+			var DOCUMENTATION_OPTIONS = {
+				URL_ROOT:'../../',
+				VERSION:'1.0.0',
+				LANGUAGE:'None',
+				COLLAPSE_INDEX:false,
+				FILE_SUFFIX:'.html',
+				HAS_SOURCE:  true,
+				SOURCELINK_SUFFIX: '.txt'
+			};
+		</script>
+			<script type="text/javascript" src="../../_static/jquery.js"></script>
+			<script type="text/javascript" src="../../_static/underscore.js"></script>
+			<script type="text/javascript" src="../../_static/doctools.js"></script>
+	
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
