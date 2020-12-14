@@ -1,0 +1,82 @@
+#!/bin/sh
+
+#this is a script to install streamsheets on raspberry pi with raspbian buster
+
+
+#get user and user home directory
+U=$SUDO_USER
+H=$(eval echo "~$U")
+
+
+#color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+WHITE="\[\033[0;37m\]"
+NC='\033[0m'
+IP=$(hostname -I)
+
+#download docker install script
+cd $H
+
+#check if docker is installed
+if [ -f /usr/bin/docker ]
+then
+	echo "${GREEN}Docker already exists${NC}"
+else
+	echo "${YELLOW}installing docker${NC}"
+	echo ""
+	sudo curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+	sudo usermod -aG docker pi
+	if [ -f /usr/bin/docker ]
+	then
+		echo "${GREEN}installed docker${NC}"
+	else
+		echo "${RED}installation of docker failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		exit 1
+	fi
+fi
+
+#run apt-get install pip, if pip is already installed this will do no harm
+echo "${YELLOW}Now installing/updating python3-pip${NC}"
+sudo apt-get install python3-pip
+
+#check if docker-compose is installed
+if [ -f /usr/local/bin/docker-compose ]
+then
+	echo "${GREEN}docker-compose is already installed${NC}"
+else
+	echo "${YELLOW}installing docker-compose now${NC}"
+	echo ""
+	sudo pip3 install docker-compose
+	if [ -f /usr/local/bin/docker-compose ]
+	then
+		echo "${GREEN}finished installing docker-compose${NC}"
+	else
+		echo "${RED}installation of docker-compose failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		exit 2
+	fi
+fi
+
+
+
+echo ""
+echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
+mkdir cedalo
+cd cedalo
+sudo docker rmi $(docker images -q cedalo/installer:2-rpi) -f
+sudo docker run -it -v $H/cedalo:/cedalo cedalo/installer:2-rpi
+
+
+echo ""
+echo ""
+echo ""
+echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (on your local network)${NC}"
+while true; do
+	read -p "Do you want to start and install streamsheets now? (Y/n): " choice
+	case "$choice" in
+		y|Y ) cd ~/cedalo; sh start.sh;;
+		n|N ) echo "${GREEN}closing shell${NC}"; break;;
+		* ) echo "${RED}type in y/Y or n/N: ${NC}";;
+	esac
+done
