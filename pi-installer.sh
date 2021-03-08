@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#this is a script to install streamsheets on raspberry pi with raspbian buster
+#this is a script to install Streamsheets on Raspberry Pi with raspbian buster
 
 
 #get user and user home directory
@@ -24,21 +24,21 @@ if [ -f /usr/bin/docker ]
 then
 	echo "${GREEN}Docker already exists${NC}"
 else
-	echo "${YELLOW}installing docker${NC}"
+	echo "${YELLOW}Installing Docker${NC}"
 	echo ""
 	sudo curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 	sudo usermod -aG docker pi
 	if [ -f /usr/bin/docker ]
 	then
-		echo "${GREEN}installed docker${NC}"
+		echo "${GREEN}Installed Docker${NC}"
 	else
-		echo "${RED}installation of docker failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		echo "${RED}Installation of Docker failed, try again or search for help at https://forum.cedalo.com ${NC}"
 		exit 1
 	fi
 fi
 
 #run apt-get install pip, if pip is already installed this will do no harm
-echo "${YELLOW}Now installing/updating python3-pip${NC}"
+echo "${YELLOW}Installing/updating python3-pip${NC}"
 sudo apt-get install python3-pip
 
 #check if docker-compose is installed
@@ -46,14 +46,14 @@ if [ -f /usr/local/bin/docker-compose ]
 then
 	echo "${GREEN}docker-compose is already installed${NC}"
 else
-	echo "${YELLOW}installing docker-compose now${NC}"
+	echo "${YELLOW}Installing docker-compose${NC}"
 	echo ""
 	sudo pip3 install docker-compose
 	if [ -f /usr/local/bin/docker-compose ]
 	then
-		echo "${GREEN}finished installing docker-compose${NC}"
+		echo "${GREEN}Finished installing docker-compose${NC}"
 	else
-		echo "${RED}installation of docker-compose failed, try again or search for help at: forum.streamsheets.com ${NC}"
+		echo "${RED}Installation of docker-compose failed, try again or search for help at http://forum.cedalo.com ${NC}"
 		exit 2
 	fi
 fi
@@ -61,22 +61,21 @@ fi
 
 
 echo ""
-echo "${YELLOW}now downloading streamsheet installing wizard${NC}"
+echo "${YELLOW}Downloading and running Cedalo-Platform installer${NC}"
 mkdir cedalo
 cd cedalo
 sudo docker rmi $(docker images -q cedalo/installer:2-rpi) -f
-sudo docker run -it -v $H/cedalo:/cedalo cedalo/installer:2-rpi
+sudo docker run --rm -it -v $H/cedalo:/cedalo cedalo/installer:2-rpi
 
 
 echo ""
 echo ""
-echo ""
-echo "${GREEN}Docker and the Streamsheet-Installer have been downloaded successfully. After installation and start, Streamsheets will be available under $(hostname):8081 in your browser (on your local network)${NC}"
+echo "${GREEN}Docker and Streamsheet have been installed successfully. After starting Streamsheets, it will be available under http://$(hostname):8081 in your browser (on your local network)${NC}"
 while true; do
-	read -p "Do you want to start and install streamsheets now? (Y/n): " choice
+	read -p "Do you want to start Streamsheets now? (Y/n): " choice
 	case "$choice" in
-		y|Y ) cd ~/cedalo; sh start.sh;;
-		n|N ) echo "${GREEN}closing shell${NC}"; break;;
+		y|Y ) cd ~/cedalo; sudo sh start.sh;;
+		n|N ) break;;
 		* ) echo "${RED}type in y/Y or n/N: ${NC}";;
 	esac
 done
