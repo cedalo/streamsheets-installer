@@ -62,10 +62,10 @@ fi
 
 echo ""
 echo "${YELLOW}Downloading and running Cedalo-Platform installer${NC}"
-mkdir cedalo
-cd cedalo
+mkdir cedalo_platform
+cd cedalo_platform
 sudo docker rmi $(docker images -q cedalo/installer:2-rpi) -f
-sudo docker run --rm -it -v $H/cedalo:/cedalo cedalo/installer:2-rpi
+sudo docker run --rm -it -v $H/cedalo_platform:/cedalo cedalo/installer:2-rpi
 
 
 echo ""
@@ -74,7 +74,7 @@ echo "${GREEN}Docker and Streamsheet have been installed successfully. After sta
 while true; do
 	read -p "Do you want to start Streamsheets now? (Y/n): " choice
 	case "$choice" in
-		y|Y ) cd ~/cedalo; sudo sh start.sh;;
+		y|Y ) cd ~/cedalo_platform; sudo sh start.sh;;
 		n|N ) break;;
 		* ) echo "${RED}type in y/Y or n/N: ${NC}";;
 	esac
